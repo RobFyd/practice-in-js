@@ -1,0 +1,16 @@
+{
+    "page": 3,
+    "books": [
+        {
+            "id": 1,
+            "title": "some title",
+            "active": false
+        },
+        {
+            "id": 2,
+            "title": "some title 2",
+            "author": null
+        }
+    ]
+}
+

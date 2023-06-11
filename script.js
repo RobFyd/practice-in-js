@@ -28,17 +28,28 @@
   }
 }
 
-
 // nesting errors
 {
-    try{
-        try {
-            throw new Error("correct error message");
-        } catch (error) {
-            console.log(error);
-            throw error;
-        }
+  try {
+    try {
+      throw new Error("correct error message");
     } catch (error) {
-        console.log(error);
+      console.log(error);
+      throw error;
     }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// JSON - JavaScript Object Notation
+
+{
+  console.log(JSON.parse('{"property": 5}'));
+
+  try {
+    console.log(JSON.parse('{"property: 6}'));
+  } catch (error) {
+    console.log("Bad JSON");
+  }
 }
