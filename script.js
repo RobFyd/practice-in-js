@@ -1,3 +1,5 @@
+//  try, throw, catch, (finally)
+
 {
   const weekDay = (index) => {
     const days = [
@@ -56,7 +58,6 @@
 
 //  JSON check
 
-
   const isValidJSON = (json) => {
     try {
       JSON.parse(json);
@@ -66,3 +67,11 @@
     }
   };
 
+
+  //  JSON.stringify
+
+const object1 = {};
+const object2 = {};
+
+object2.object1 = object1;
+object1.object2 = object2; //  typeError
