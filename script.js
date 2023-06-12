@@ -53,3 +53,16 @@
     console.log("Bad JSON");
   }
 }
+
+//  JSON check
+
+
+  const isValidJSON = (json) => {
+    try {
+      JSON.parse(json);
+      return true;
+    } catch(error) {
+      return false;
+    }
+  };
+
