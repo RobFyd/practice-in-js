@@ -8,3 +8,13 @@ fetch("/add-person", {
     surname: "Dabrowskiki",
   }),
 });
+
+// axios - (for reakt - npm install axios)
+
+axios
+  .get("products.json")
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
+
+
+
