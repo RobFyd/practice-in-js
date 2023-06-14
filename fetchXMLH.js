@@ -1,4 +1,4 @@
-// XMLH
+// XMLH - rather as a curiosity
 
 {
   console.log("Loading 1:XMLH, 2:etch, 3:alternative fetch, 4:catch");
