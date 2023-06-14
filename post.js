@@ -16,5 +16,12 @@ axios
   .then((response) => console.log(response.data))
   .catch((error) => console.error(error));
 
+// axios - post
 
-
+axios
+  .post("/add-person", {
+    name: "Krzysiek",
+    surname: "Dabrowskiki",
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
