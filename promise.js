@@ -25,3 +25,15 @@
 
     .catch(() => console.error("Something went wrong"));
 }
+
+// {
+//   // own promise
+
+//   const promise = new Promise((resolve, reject) => {
+//     resolve(result);
+//     // or
+//     reject("Something...");
+//   });
+
+//   promise.then();
+// }
