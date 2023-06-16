@@ -49,3 +49,23 @@
     console.log("one second passed");
   });
 }
+
+
+//add reject
+{
+  const wait = time =>
+    new Promise((resolve, reject) => {
+      if(typeof time !== "number" || time < 0) {
+        reject("incorrect time");
+      }
+      setTimeout(resolve, time);
+    });
+
+  wait(2000)
+  .then(() => {
+    console.log("two seconds passed");
+  })
+  .catch(error => {
+    console.error(error);
+  });
+}
