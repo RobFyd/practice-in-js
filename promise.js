@@ -84,6 +84,26 @@
   (async () => {
     const response = await fetch("products.json");
     const products = await response.json();
-    console.log(products+"async/await");
+    console.log(products + "async/await");
   })();
 }
+
+//  fetch + async/await  + error handling
+{
+  (async () => {
+    try {
+      const response = await fetch("productss.json");
+
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+
+      const products = await response.json();
+      console.log(products + "async/await");
+    } catch (error) {
+      console.error("Something wrong", error);
+    }
+  })();
+}
+
+//  with axios
