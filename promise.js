@@ -106,4 +106,14 @@
   })();
 }
 
-//  with axios
+//  with axios easier
+{
+  (async () => {
+    try {
+      const response = await axios.get("productsssss.json");
+      console.log(response.data);
+    } catch (error) {
+      console.error("errorError", error);
+    }
+  })();
+}
