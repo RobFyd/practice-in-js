@@ -52,3 +52,6 @@
 //   type: "addTask",
 //   payload: "learn reducer",
 // };
+
+
+// store - npm install @reduxjs/toolkit in practise-React repo
