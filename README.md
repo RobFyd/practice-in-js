@@ -9,3 +9,4 @@ Practical exercises in JavaScript. In the history of the repository you will fin
 - promise, custom promise
 - async/await
 - reducer
+- generator
