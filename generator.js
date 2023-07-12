@@ -67,3 +67,15 @@ const generator4 = nextProductName([
     price: 12999,
   },
 ]);
+
+function* crazyGenerator() {
+    const number = yield 5;
+    const text = yield number * 5;
+    yield text.repeat(5);
+}
+
+const generator5 = crazyGenerator();
+
+console.log(generator5.next());
+console.log(generator5.next(100));
+console.log(generator5.next("Robi "));
