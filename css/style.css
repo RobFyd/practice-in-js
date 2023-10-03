@@ -54,14 +54,14 @@ p {
 }
 
 p#positioned {
-    position: absolute;
+    position: fixed;
     /* static - default value, not positioned in any special way */
     /* relative - relative to its normal position */
     /* absolute - relative to the first parent element that has a position other than static */
     /* fixed - relative to the viewport */
     /* sticky - based on the user's scroll position */
-    top: 20px;
-    left: 50px;
+    bottom: 50px;
+    right: 50px;
     margin: 0;
     background-color: aqua;
     /* width: auto;
