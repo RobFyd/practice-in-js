@@ -37,8 +37,8 @@ p {
 .container2 {
     position: relative;
     background-color: bisque;
-    overflow: scroll;
-    height: 150px;
+    /* overflow: scroll;
+    height: 150px; */
 }
 
 .num {
@@ -48,20 +48,24 @@ p {
     height: 200px;
     line-height: 200px;
     text-align: center;
+    position: relative;
+    z-index: 2;
+    /* z-index - the higher the value, the more on top */
 }
 
 p#positioned {
-    position: sticky;
+    position: absolute;
     /* static - default value, not positioned in any special way */
     /* relative - relative to its normal position */
     /* absolute - relative to the first parent element that has a position other than static */
     /* fixed - relative to the viewport */
     /* sticky - based on the user's scroll position */
     top: 20px;
-    right: 20px;
+    left: 50px;
     margin: 0;
     background-color: aqua;
-    width: auto;
+    /* width: auto;
     height: auto;
-    line-height: 1;
+    line-height: 1; */
+    z-index: 3;
 }
