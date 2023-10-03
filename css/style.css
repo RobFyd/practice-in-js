@@ -68,4 +68,13 @@ p#positioned {
     height: auto;
     line-height: 1; */
     z-index: 3;
+    opacity: 0.5;
+}
+
+p#hidden{
+    visibility: hidden;
+}
+
+.img1 {
+    visibility: visible;
 }
