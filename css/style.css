@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-size: 15px;
 }
 
 *, ::after, ::before {
@@ -13,4 +14,15 @@ body {
 
 .container {
     margin: 20px;
+}
+
+.text {
+    font-size: 20px;
+    width: 30em;
+}
+
+p {
+    font-size: 2rem;   
+    
+    /* em - relative to the parent element, rem - relative to the root element (html) */
 }
