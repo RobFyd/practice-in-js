@@ -33,3 +33,35 @@ p {
     /* vmin - relative to the viewport's smaller dimension */
     /* vmax - relative to the viewport's larger dimension */
 }
+
+.container2 {
+    position: relative;
+    background-color: bisque;
+    overflow: scroll;
+    height: 150px;
+}
+
+.num {
+    border: 2px solid black;
+    background-color: #ccc;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
+
+p#positioned {
+    position: sticky;
+    /* static - default value, not positioned in any special way */
+    /* relative - relative to its normal position */
+    /* absolute - relative to the first parent element that has a position other than static */
+    /* fixed - relative to the viewport */
+    /* sticky - based on the user's scroll position */
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    background-color: aqua;
+    width: auto;
+    height: auto;
+    line-height: 1;
+}
