@@ -23,6 +23,13 @@ body {
 
 p {
     font-size: 2rem;   
-    
     /* em - relative to the parent element, rem - relative to the root element (html) */
+}
+
+.text2 {
+    font-size: 4vw;  
+    /* vw - relative to the viewport width, 4vh = 4% */
+    /* vh - relative to the viewport height */
+    /* vmin - relative to the viewport's smaller dimension */
+    /* vmax - relative to the viewport's larger dimension */
 }
