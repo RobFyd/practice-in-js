@@ -12,6 +12,17 @@ body {
     background-color: whitesmoke;
 }
 
+.overflow {
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    overflow: auto;
+    resize: both;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+
 .container {
     margin: 20px;
 }
@@ -22,12 +33,12 @@ body {
 }
 
 p {
-    font-size: 2rem;   
+    font-size: 2rem;
     /* em - relative to the parent element, rem - relative to the root element (html) */
 }
 
 .text2 {
-    font-size: 4vw;  
+    font-size: 4vw;
     /* vw - relative to the viewport width, 4vh = 4% */
     /* vh - relative to the viewport height */
     /* vmin - relative to the viewport's smaller dimension */
@@ -71,7 +82,7 @@ p#positioned {
     opacity: 0.5;
 }
 
-p#hidden{
+p#hidden {
     visibility: hidden;
 }
 
