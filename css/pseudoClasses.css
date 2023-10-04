@@ -1,0 +1,24 @@
+
+p:first-child {
+    color: red;
+}
+
+p:last-child {
+    color: blue;
+}
+
+h1:first-of-type {
+    color: green;
+}
+
+h1:last-of-type {
+    color: yellow;
+}
+
+tr:nth-child(3) {
+    background-color: red;
+}
+
+td:only-child {
+    background-color: blue;
+}
