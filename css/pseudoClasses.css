@@ -22,3 +22,24 @@ tr:nth-child(3) {
 td:only-child {
     background-color: blue;
 }
+
+a {
+   font-size: 40px;
+}
+
+a:link {
+    color: black; /* link must be first */
+}
+
+a:visited {
+    color: red; /* visited must be after link */
+}
+
+a:hover {
+    color: green; /* hover must be after visited */
+}
+
+a:active {
+    color: blue; /* active must be after hover */
+}
+
