@@ -1,3 +1,6 @@
+body {
+    line-height: 2;
+}
 
 p:first-child {
     color: red;
@@ -24,22 +27,65 @@ td:only-child {
 }
 
 a {
-   font-size: 40px;
+    font-size: 40px;
 }
 
 a:link {
-    color: black; /* link must be first */
+    color: black;
+    /* link must be first */
 }
 
 a:visited {
-    color: red; /* visited must be after link */
+    color: red;
+    /* visited must be after link */
 }
 
 a:hover {
-    color: green; /* hover must be after visited */
+    color: green;
+    /* hover must be after visited */
 }
 
 a:active {
-    color: blue; /* active must be after hover */
+    color: blue;
+    /* active must be after hover */
 }
 
+input, select {
+    border: 1px solid black;
+}
+
+input:disabled {
+    background-color: pink;
+}
+
+input, select:enabled {
+    background-color: lightgoldenrodyellow;
+}
+
+input:focus {
+    box-shadow: 2px 2px 2px 2px greenyellow;
+}
+
+select:focus {
+    box-shadow: 2px 2px 2px 2px greenyellow;
+}
+
+input:invalid {
+    outline: 2px dashed red;
+}
+
+input:valid {
+    outline: 2px dashed green;
+}
+
+:required {
+    border: 1px solid red;
+}
+
+/* :optional {
+    border: 1px solid blueviolet;
+} */
+
+option:checked {
+    display: none;
+}
