@@ -89,3 +89,13 @@ input:valid {
 option:checked {
     display: none;
 }
+
+p:target {
+    background: #ccc;
+}
+
+/* p:not(:target) {
+    background: #ccc;
+} */
+
+/* p:not(:target) - all p elements that are not the target of a link */
