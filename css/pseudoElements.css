@@ -5,3 +5,8 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  p::first-line {  /* pseudo-element double */
+    color: red;
+    font-variant: small-caps;
+  }
