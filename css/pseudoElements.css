@@ -6,7 +6,25 @@ html {
     box-sizing: inherit;
   }
 
-  p::first-line {  /* pseudo-element double */
+  p::first-line {  /* pseudo-element double colon */
     color: red;
     font-variant: small-caps;
+    background-color: yellow;
+  }
+
+  p::first-letter {
+    color: red;
+    font-size: 300%;
+    background-color: yellow;
+  }
+
+  p::selection {
+    color: blue;
+    background-color: lightgreen;
+  }
+
+  input::placeholder {
+    background-color: lightblue;
+    color: white;
+    font-style: italic;
   }
