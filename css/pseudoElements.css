@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
   }
-  
+
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -14,7 +14,7 @@ html {
 
   p::first-letter {
     color: red;
-    font-size: 300%;
+    font-size: 200%;
     background-color: yellow;
   }
 
@@ -23,8 +23,55 @@ html {
     background-color: lightgreen;
   }
 
+  p::before {
+    content: open-quote "tekst" "🌍";
+  }
+
+  p::after {
+    content: "🌎" "tekst2" close-quote ;
+  }
+
   input::placeholder {
     background-color: lightblue;
     color: white;
     font-style: italic;
   }
+
+  h1 {
+    counter-increment: header;
+    counter-reset: subheader;
+  }
+
+  h1::before {
+    content: counter(header) ". ";
+  }
+
+  h2 {
+    counter-increment: subheader;
+  }
+
+  h2::before {
+    content: counter(header) "." counter(subheader) ". ";
+  }
+
+  /* h1::before, h2::before {
+    content: counters(header, ".") ". ";
+  }
+
+  section {
+    counter-increment: header;
+  }
+
+  h2:first-of-type {
+    counter-reset: header;
+  }
+
+  h2 {
+    counter-increment: header;
+  } */
+
+  /* h1:first-of-type::first-letter {
+    color: red;
+    font-size: 200%;
+    background-color: yellow;
+  } */
