@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+section {
+    /* column-count: 4;
+    column-width: 150px; */
+    columns: 4 150px; /* shorthand */
+    column-gap: 30px;
+    /* column-rule-style: solid;
+    column-rule-width: 2px;
+    column-rule-color: #ccc; */
+    column-rule: 2px solid #ccc; /* shorthand */
+}
+
+h2 {
+    /* margin-top: 0; */
+    column-span: all;
+    text-align: center;
+}
+
+p {
+    margin-top: 0;
+}
