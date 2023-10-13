@@ -21,6 +21,10 @@ article {
     box-shadow: 0 0 10px #ccc;
 }
 
+h1 {
+    font-size: 34px !important; /* !important overrides any other style but is not recommended */
+}
+
 h1{
     font-size: 23px;
 }
@@ -37,3 +41,35 @@ h3 {
     font-style: italic;
 }
 
+#most-popular-songs {           /* Selects the element with id="most-popular-songs" */
+    font-style: italic;
+}
+
+[href] {            /* Selects all elements with an href attribute */
+    color: red;
+}
+
+[class~="footer"] {         /* Selects all elements with a class attribute containing "footer" */
+    color: darkblue;
+}
+
+[href^="https"] {}       /* Selects all elements with an href attribute value starting with "https" */
+[href$="https"] {}       /* Selects all elements with an href attribute value ending with "https" */
+[href*="https"] {}       /* Selects all elements with an href attribute value containing "https" */
+[href~="https"] {}       /* Selects all elements with an href attribute value containing "https" */
+
+article li {            /* Selects all <li> elements that are descendants of an <article> element */
+    text-decoration: underline yellow;
+}
+
+ol > li {           /* Selects all <li> elements that are direct children of an <ol> element */
+    background-color: azure;
+}
+
+p ~ ol {            /* Selects every <ol> element that are preceded by a <p> element */
+    list-style: circle;
+}
+
+h3 + ol {           /* Selects every <ol> element that are preceded by a <h3> element */
+    background-color: lightsalmon;
+}
