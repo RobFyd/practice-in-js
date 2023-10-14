@@ -29,10 +29,12 @@ html {
     from {
         background: red;
     }
-    50%{
+
+    50% {
         background: yellow;
         transform: scale(1.5);
     }
+
     to {
         background: blue;
     }
@@ -42,6 +44,39 @@ html {
     from {
         margin-left: 100px;
     }
+
+    to {
+        margin-left: 300px;
+    }
+}
+
+.element2 {
+    margin: 100px;
+    height: 150px;
+    width: 150px;
+    background: black;
+    animation: 2s linear 1s 2 alternate both running color2;
+}
+
+.element2:hover {
+    animation-play-state: paused;
+}
+
+@keyframes color2 {
+    from {
+        background: red;
+    }
+
+    to {
+        background: blue;
+    }
+}
+
+@keyframes move2 {
+    from {
+        margin-left: 100px;
+    }
+
     to {
         margin-left: 300px;
     }
