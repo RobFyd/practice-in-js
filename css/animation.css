@@ -7,7 +7,28 @@ html {
 }
 
 .element {
+    margin: 100px;
     height: 150px;
     width: 150px;
     background: black;
+    animation-name: color;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes color {
+    from {
+        background: red;
+        margin-left: 100px;
+    }
+    50%{
+        background: yellow;
+        transform: scale(1.2);
+    }
+    to {
+        background: blue;
+        margin-left: 300px;
+    }
 }
