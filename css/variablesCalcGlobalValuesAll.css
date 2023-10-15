@@ -48,3 +48,8 @@ article {
     background: var(--colorPrimary);
     color: var(--colorHover, white);
 }
+
+.article--dark .articleMore {
+   width: calc(100% - 60px);
+   margin: 0 30px;
+}
