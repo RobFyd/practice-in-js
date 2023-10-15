@@ -14,15 +14,21 @@ html {
 article {
     margin: 20px;
     padding: 30px;
-    box-shadow: 0 0 10px var(--colorSecondary);
-    color: #333;
+    box-shadow: 0 0 10px darkolivegreen;
+    color: var(--colorSecondary);
 }
 
 .article--dark {
     background: #222;
+    --colorSecondary: #ccc;
+    --colorPrimary: #0f0;
 }
 
 .articleImportant {
+    color: var(--colorPrimary);
+}
+
+.articleHeader {
     color: var(--colorPrimary);
 }
 
@@ -40,5 +46,5 @@ article {
 
 .articleMore:hover {
     background: var(--colorPrimary);
-    color: white;
+    color: var(--colorHover, white);
 }
