@@ -6,20 +6,29 @@ html {
     box-sizing: inherit;
 }
 
+:root {
+    --colorPrimary: red;
+    --colorSecondary: #333;
+}
+
 article {
     margin: 20px;
     padding: 30px;
-    box-shadow: 0 0 10px #333;
+    box-shadow: 0 0 10px var(--colorSecondary);
     color: #333;
 }
 
+.article--dark {
+    background: #222;
+}
+
 .articleImportant {
-    color: red;
+    color: var(--colorPrimary);
 }
 
 .articleMore {
     text-decoration: none;
-    color: red;
+    color: var(--colorPrimary);
     border: 1px solid;
     padding: 10px 20px;
     display: block;
@@ -30,6 +39,6 @@ article {
 }
 
 .articleMore:hover {
-    background: red;
+    background: var(--colorPrimary);
     color: white;
 }
