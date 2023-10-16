@@ -66,6 +66,23 @@
 
 // ******************with constructor*******************
 
+class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
 
+    getArea = () => this.width * this.height;
+}
+
+const rectangle1 = new Rectangle(5, 6);
+
+const rectangle2 = new Rectangle(7, 12);
+
+console.log(rectangle1);
+console.log(rectangle2);
+
+console.log(rectangle1.getArea());
+console.log(rectangle2.getArea());
 
 
