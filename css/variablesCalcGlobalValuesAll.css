@@ -22,6 +22,7 @@ article {
     background: #222;
     --colorSecondary: #ccc;
     --colorPrimary: #0f0;
+    /* color: inherit;  "inherit from parent" */
 }
 
 .articleImportant {
@@ -52,4 +53,6 @@ article {
 .article--dark .articleMore {
    width: calc(100% - 60px);
    margin: 0 30px;
+   /* border: initial; */
+   /* all: unset; */
 }
