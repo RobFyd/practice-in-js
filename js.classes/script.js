@@ -92,3 +92,68 @@
   console.log(rectangle1.getArea());
   console.log(rectangle2.getArea());
 }
+
+// ******************with constructor2*******************
+
+{
+  class Rectangle {
+    width;
+    height;
+
+    static edgesCount = 4;
+
+    static totalArea = (...rectangles) => {
+      let sum = 0;
+
+      rectangles.forEach((rectangle) => (sum += rectangle.getArea()));
+
+      return sum;
+    };
+
+    constructor(width, height) {
+      this.width = width;
+      this.height = height;
+    }
+
+    getArea = () => this.width * this.height;
+  }
+  const rectangle1 = new Rectangle(5, 6);
+
+  const rectangle2 = new Rectangle(7, 12);
+
+  console.log(rectangle1);
+  console.log(rectangle2);
+
+  console.log(rectangle1.getArea());
+  console.log(rectangle2.getArea());
+
+  console.log(Rectangle.edgesCount);
+
+  console.log(Rectangle.totalArea(new Rectangle(1, 2), new Rectangle(2, 4)));
+}
+
+// ******************class expansion*********************
+
+class Animal {
+  name;
+
+  constructor(name) {
+    this.name = name;
+  }
+
+  makeNoise = () => console.log(`${this.name} makes a sound!`);
+}
+
+class Cat extends Animal {
+  constructor(name) {
+    super(name);
+  }
+
+  makeNoise = () => console.log(`${this.name} meows!`);
+}
+
+const animal = new Animal("Kitty");
+const cat = new Cat("Britti");
+
+animal.makeNoise();
+cat.makeNoise();
