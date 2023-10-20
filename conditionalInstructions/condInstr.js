@@ -1,5 +1,5 @@
 {
-    let number1 = 5;
+    let number1 = 25;
     let number2 = 10;
     let Result = "";
 
@@ -12,4 +12,15 @@
     let resultElement = document.getElementById("result");
 
     resultElement.innerHTML = Result;
+}
+
+{
+    let container = document.querySelector(".container");
+    console.log(container);
+
+    if(container.classList.contains("dark")) {
+        container.style.backgroundColor = "darkslategrey";
+    } else {
+        container.style.backgroundColor = "lightgrey";
+    }
 }
