@@ -30,7 +30,13 @@ h1 {
     cursor: pointer;
 }
 
-#result2 {
+.result2 {
+    margin: 25px 0;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.result3 {
     margin: 25px 0;
     font-size: larger;
     font-weight: bold;

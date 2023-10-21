@@ -46,7 +46,23 @@
     Result = "number1 is bigger than number2";
   }
 
-  const resultElement = document.getElementById("result2");
+  const resultElement = document.querySelector(".result2");
+
+  resultElement.innerHTML = Result;
+}
+
+{
+  let number1 = 25;
+  let number2 = 25;
+  let Result = "";
+
+  if (number1 !== number2) {
+    Result = "number1 is not equal to number2";
+  } else {
+    Result = "number1 is equal to number2";
+  }
+
+  const resultElement = document.querySelector(".result3");
 
   resultElement.innerHTML = Result;
 }
