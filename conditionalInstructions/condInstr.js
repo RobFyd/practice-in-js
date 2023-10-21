@@ -34,3 +34,19 @@
     }
   });
 }
+
+{
+  let number1 = 25;
+  let number2 = 25;
+  let Result = "";
+
+  if (number1 <= number2) {
+    Result = "number1 is smaller or equal to number2";
+  } else {
+    Result = "number1 is bigger than number2";
+  }
+
+  const resultElement = document.getElementById("result2");
+
+  resultElement.innerHTML = Result;
+}

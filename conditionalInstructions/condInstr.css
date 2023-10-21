@@ -29,3 +29,9 @@ h1 {
     background-color: #fff;
     cursor: pointer;
 }
+
+#result2 {
+    margin: 25px 0;
+    font-size: larger;
+    font-weight: bold;
+}
