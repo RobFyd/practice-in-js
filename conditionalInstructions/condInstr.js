@@ -101,3 +101,27 @@
     }
   }
 }
+
+{
+  let number1 = 40;
+  let number2 = 20;
+  let number3 = 30;
+
+  if (number1 > number2 && number1 > number3) {
+    console.log("number1 is the biggest");
+  } else if (number2 > number1 && number2 > number3) {
+    console.log("number2 is the biggest");
+  } else {
+    console.log("number3 is the biggest");
+  }
+}
+
+{
+  let number1 = 400;
+  let number2 = 0;
+  let number3 = 300;
+
+  if (number1 > 0 || number2 > 0 || number3 > 0) {
+    console.log("At least one of the numbers is bigger than 0");
+  }
+}
