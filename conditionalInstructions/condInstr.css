@@ -41,3 +41,9 @@ h1 {
     font-size: larger;
     font-weight: bold;
 }
+
+#text {
+    margin: 25px 0;
+    font-size: larger;
+    font-weight: bold;
+}
