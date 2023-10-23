@@ -6,6 +6,12 @@ html {
     box-sizing: inherit;
 }
 
-body {
+.body {
     margin: 30px;
+    color: #333;
+}
+
+.dark {
+    background-color: #222;
+    color: #eee;
 }
