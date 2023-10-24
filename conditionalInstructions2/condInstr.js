@@ -29,3 +29,23 @@ button2.addEventListener("click", () => {
 
   themeMode2.innerText = container2.classList.contains("dark") ? "OFF" : "ON";
 });
+
+
+// switch statement
+
+const button3 = document.querySelector(".button3");
+const container3 = document.querySelector(".container3");
+let themeMode3 = document.querySelector(".themeMode3");
+
+button3.addEventListener("click", () => {
+  container3.classList.toggle("dark");
+
+  switch (container3.classList.contains("dark")) {
+    case true:
+      themeMode3.innerText = "OFF";
+      break;
+    case false:
+      themeMode3.innerText = "ON";
+      break;
+  }
+});
