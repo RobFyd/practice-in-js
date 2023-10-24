@@ -1,3 +1,5 @@
+// if/else statement
+
 const button = document.querySelector(".button");
 const container = document.querySelector(".container");
 let themeMode = document.querySelector(".themeMode");
@@ -13,4 +15,17 @@ button.addEventListener("click", () => {
   } else {
     themeMode.innerText = "ON";
   }
+});
+
+
+//ternary operator
+
+const button2 = document.querySelector(".button2");
+const container2 = document.querySelector(".container2");
+let themeMode2 = document.querySelector(".themeMode2");
+
+button2.addEventListener("click", () => {
+  container2.classList.toggle("dark");
+
+  themeMode2.innerText = container2.classList.contains("dark") ? "OFF" : "ON";
 });
