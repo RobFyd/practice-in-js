@@ -9,6 +9,14 @@ html {
 .body {
     margin: 30px;
     color: #333;
+    background-color: #111;
+}
+
+.container {
+    border: 1px solid crimson;
+    margin: 20px;
+    padding: 20px;
+    background-color: whitesmoke;
 }
 
 .dark {
