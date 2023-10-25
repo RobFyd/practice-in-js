@@ -49,3 +49,30 @@ button3.addEventListener("click", () => {
       break;
   }
 });
+
+
+let dayInputs = document.querySelectorAll(".day");
+let howMuch = document.querySelector(".howMuch");
+
+dayInputs.forEach(input => {
+  input.addEventListener("change", () => {
+      let selectedValue = input.value;
+      if (selectedValue === "monday") {
+          howMuch.textContent = "10%";
+      } else if (selectedValue === "tuesday") {
+          howMuch.textContent = "20%";
+      } else if (selectedValue === "wednesday") {
+          howMuch.textContent = "30%";
+      } else if (selectedValue === "thursday") {
+          howMuch.textContent = "40%";
+      } else if (selectedValue === "friday") {
+          howMuch.textContent = "50%";
+      } else if (selectedValue === "saturday") {
+          howMuch.textContent = "60%";
+      } else if (selectedValue === "sunday") {
+          howMuch.textContent = "70%";
+      } else {
+          howMuch.textContent = "plenty";
+      }
+  });
+});

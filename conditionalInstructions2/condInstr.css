@@ -12,7 +12,7 @@ html {
     background-color: #111;
 }
 
-.container, .container2, .container3 {
+.container, .container2, .container3, .container4 {
     border: 1px solid crimson;
     margin: 20px;
     padding: 20px;
@@ -22,4 +22,11 @@ html {
 .dark {
     background-color: #222;
     color: #eee;
+}
+
+.label {
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    margin: 0 10px 10px 0;
 }
