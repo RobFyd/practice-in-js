@@ -48,7 +48,6 @@ button3.addEventListener("click", () => {
   }
 });
 
-
 // if/else statement
 
 let dayInputs = document.querySelectorAll(".day");
@@ -61,10 +60,32 @@ dayInputs.forEach((input) => {
       selectedValue === "monday" ||
       selectedValue === "tuesday" ||
       selectedValue === "wednaesday"
-    ) {howMuch.innerText = "plenty of";} 
-    else if (selectedValue === "thursday" || selectedValue === "friday") 
-    {howMuch.innerText = "some";}
-    else if (selectedValue === "saturday" || selectedValue === "sunday") 
-     {howMuch.innerText = "a little bit of";}
+    ) {
+      howMuch.innerText = "plenty of";
+    } else if (selectedValue === "thursday" || selectedValue === "friday") {
+      howMuch.innerText = "some";
+    } else if (selectedValue === "saturday" || selectedValue === "sunday") {
+      howMuch.innerText = "a little bit of";
+    }
+  });
+});
+
+// ternary operator
+
+let dayInputs2 = document.querySelectorAll(".day2");
+let howMuch2 = document.querySelector(".howMuch2");
+
+dayInputs2.forEach((input) => {
+  input.addEventListener("change", () => {
+    let selectedValue = input.value;
+
+    howMuch2.innerText =
+      (selectedValue === "monday" || selectedValue === "tuesday" || selectedValue === "wednaesday")
+        ? "plenty of"
+        : (
+          (selectedValue === "thursday" || selectedValue === "friday")
+            ? "some"
+            : "a little bit of"
+        );
   });
 });
