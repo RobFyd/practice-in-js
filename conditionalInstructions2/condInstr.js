@@ -48,6 +48,7 @@ button3.addEventListener("click", () => {
   }
 });
 
+
 // if/else statement
 
 let dayInputs = document.querySelectorAll(".day");
@@ -87,5 +88,32 @@ dayInputs2.forEach((input) => {
             ? "some"
             : "a little bit of"
         );
+  });
+});
+
+// switch statement
+
+let dayInputs3 = document.querySelectorAll(".day3");
+let howMuch3 = document.querySelector(".howMuch3");
+
+dayInputs3.forEach((input) => {
+  input.addEventListener("change", () => {
+    let selectedValue = input.value;
+
+    switch (selectedValue) {
+      case "monday":
+      case "tuesday":
+      case "wednaesday":
+        howMuch3.innerText = "plenty of";
+        break;
+
+      case "thursday":
+      case "friday":
+        howMuch3.innerText = "some";
+        break;
+
+      default:
+        howMuch3.innerText = "a little bit of";
+    }
   });
 });
