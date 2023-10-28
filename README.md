@@ -3,7 +3,7 @@
 
 Practical exercises in JavaScript. In the history of the repository you will find, among others, exercises with: 
 
-- conditional instructions
+- conditional instructions (if/else statement, ternary operator, switch statement)
 - animations
 - pseudoClasses, pseudoElements
 - selectors
