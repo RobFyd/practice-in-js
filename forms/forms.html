@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript exercises</title>
-    <link rel="icon" href="logo/RFLogo.png" />
+    <link rel="icon" href="../logo/RFLogo.png" />
     <meta property="og:image" content="" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link
@@ -29,15 +29,20 @@
             <legend>Your data</legend>
             <p>
                 <label>
-                    Your height (cm): <input type="number" min="1" step="any" />
+                    Your height (cm): <input class="js-height" type="number" min="1" step="any" value="175" />
                 </label>
             </p>
             <p>
                 <label>
-                    Your weight (kg): <input type="number" min="1" step="any" />
+                    Your weight (kg): <input class="js-weight" type="number" min="1" step="any" />
                 </label>
             </p>
         </fieldset>
+        <p>
+          <button type="submit">Calculate BMI !!!</button>
+        </p>
     </form>
+    <p>Your BMI is: <strong></strong></p>
   </body>
+
 </html>
