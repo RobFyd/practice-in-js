@@ -29,12 +29,12 @@
             <legend>Your data</legend>
             <p>
                 <label>
-                    Your height (cm): <input name="height" class="js-height" type="number" min="1" step="any" value="175" />
+                    Your height (cm): <input name="height" class="js-height" required type="number" min="1" step="any" value="175" />
                 </label>
             </p>
             <p>
                 <label>
-                    Your weight (kg): <input name="weight" class="js-weight" type="number" min="1" step="any" />
+                    Your weight (kg): <input name="weight" class="js-weight" required type="number" min="1" step="any" />
                 </label>
             </p>
         </fieldset>
@@ -60,7 +60,7 @@
           <button type="reset" class="js-reset" type="submit">RESET !</button>
         </p>
     </form>
-    <p>Your BMI is: <strong></strong></p>
+    <p>Your BMI is: <strong class="js-bmi" style="font-size: x-large; color: crimson;">N/A</strong></p>
   </body>
 
 </html>
