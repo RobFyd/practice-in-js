@@ -1,3 +1,5 @@
+const formElement = document.querySelector(".js-form");
+
 const heightElement = document.querySelector(".js-height");
 console.log(heightElement);
 // console.log(heightElement.value);
@@ -18,5 +20,13 @@ console.log(radioElement1);
 const radioElement2 = document.querySelector(".js-radio-2");
 console.log(radioElement2.checked = true);
 
-const submit = document.querySelector(".js-submit");
-const form = document.querySelector(".js-form");
+const submitElement = document.querySelector(".js-submit");
+
+formElement.addEventListener("reset", () => {
+    console.log("Reset happens");
+});
+
+formElement.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log("Submit done");
+});
