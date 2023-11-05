@@ -30,5 +30,17 @@ function name(parameter1, parameter2) {
   // Arrow functions
   
   {
-      let double = number => number * 2;  
+    //   let double = (number) => {
+    //       return number * 2;
+    //   }                              //the same as below
+      let double = number => number * 2;
+
+      let myNumber = 33;
+
+      console.log(double(myNumber));
   }
+
+  // let - block scope (variable)
+  // var - function scope (variable)
+  // const - block scope (constant)
+    
