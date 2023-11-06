@@ -24,7 +24,6 @@
   const welcome = () => {
     console.log("Hello world!");
   }
-  welcome();
   
   const onConsoleInput = () => {
     console.log(`Yor height is ${heightElement.value}cm`);
@@ -60,10 +59,16 @@
   }
   
   
-  formElement.addEventListener("submit", bmiCalculate);
-  heightElement.addEventListener("input", onConsoleInput);
-  formElement.addEventListener("reset", resetForm);
-  // formElement.addEventListener("input", bmiStatus);
+  const init = () => {
+    formElement.addEventListener("submit", bmiCalculate);
+    heightElement.addEventListener("input", onConsoleInput);
+    formElement.addEventListener("reset", resetForm);
+    // formElement.addEventListener("input", bmiStatus);
+
+    welcome();
+  }
+
+  init();
 }
 
 {
