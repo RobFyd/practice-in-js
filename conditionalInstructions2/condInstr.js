@@ -81,7 +81,7 @@ dayInputs2.forEach((input) => {
     let selectedValue = input.value;
 
     howMuch2.innerText =
-      (selectedValue === "monday" || selectedValue === "tuesday" || selectedValue === "wednaesday")
+      (selectedValue === "monday" || selectedValue === "tuesday" || selectedValue === "wednesday")
         ? "plenty of"
         : (
           (selectedValue === "thursday" || selectedValue === "friday")
@@ -103,7 +103,7 @@ dayInputs3.forEach((input) => {
     switch (selectedValue) {
       case "monday":
       case "tuesday":
-      case "wednaesday":
+      case "wednesday":
         howMuch3.innerText = "plenty of";
         break;
 
