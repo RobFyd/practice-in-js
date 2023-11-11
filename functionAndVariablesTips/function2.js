@@ -9,15 +9,31 @@
 }
 
 {
-  // hoisting
+  // hoisting ( var and no arrow function )
 
-  myFunction(); // Hello World :)
+  welcome(); // Hello World :)
 
   console.log(variable);
 
-  function myFunction() {
+  function welcome() {
     console.log("Hello World :)");
   }
 
-  var variable; // undefined
+  var variable = 100; // undefined
+}
+
+// function in no name function( anonymous function )
+
+{
+  (() => {
+    welcome2(); // Hello World :)
+
+    console.log(variable2);
+
+    function welcome2() {
+      console.log("Hello World :D :D :D");
+    }
+
+    var variable2 = 100;
+  })();
 }
