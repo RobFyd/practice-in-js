@@ -71,3 +71,37 @@
     products.shift();
     console.log(products);
 }
+
+// deleting and adding elements from array - splice()
+
+{
+    const products = ["eggs", "milk", "butter", "bread", "cheese"];
+
+    products.splice(1, 2);          // delete 2 elements starting from index 1
+    console.log(products);
+}
+
+{
+    const products = ["eggs", "milk", "butter", "bread", "cheese"];
+
+    products.splice(2, 2, "tomato", "potato");          // delete 2 elements starting from index 2 and add 2 elements
+    console.log(products);
+}
+
+// iterating over the elements of an array - forEeach(), for...of(without index)
+
+{
+    const products = ["eggs", "milk", "butter", "bread", "cheese"];
+
+    products.forEach((product, index) => {
+        console.log(`Product ${index + 1}: ${product}`);
+    });
+}
+
+{
+    const products = ["eggs", "milk", "butter", "bread", "cheese"];
+
+    for (const product of products) {
+        console.log(product);
+    }
+}
