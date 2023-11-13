@@ -12,6 +12,7 @@ Practical exercises in JavaScript. In the history of the repository you will fin
 - columns
 - error handling, exception handling
 - objects
+- arrays
 - JSON (parsing, stringifying)
 - fetch, axios, post
 - promise, custom promise
