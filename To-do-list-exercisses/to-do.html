@@ -15,13 +15,19 @@
       referrerpolicy="no-referrer"
     />
     <script defer src="to-do.js"></script>
-    <link href="" rel="stylesheet" />
+    <link href="to-do.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredoka+One&family=Lato:wght@400;700&family=Pacifico&display=swap"
       rel="stylesheet"
     />
   </head>
 
-  <body>to-do</body>
+  <body>
+    <form class="js-form">
+      <input class="js-newTask" />
+      <button class="js-addTask">Add new task</button>
+    </form>
 
-  </html>
+    <ul class="js-tasks"></ul>
+  </body>
+</html>
