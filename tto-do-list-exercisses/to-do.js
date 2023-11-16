@@ -31,8 +31,7 @@ console.log("test");
 
     removeButtons.forEach((removeButton, index) => {
       removeButton.addEventListener("click", () => {
-        tasks.splice(index, 1);
-        render();
+        removeTask(index);
       });
     });
   };
@@ -42,6 +41,11 @@ console.log("test");
       content: newTaskContent,
     });
 
+    render();
+  };
+
+  const removeTask = (index) => {
+    tasks.splice(index, 1);
     render();
   };
 
