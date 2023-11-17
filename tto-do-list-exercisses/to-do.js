@@ -5,10 +5,12 @@ console.log("test");
     {
       content: "example task 1",
       done: false,
+      important: false,
     },
     {
       content: "example task 2",
       done: true,
+      important: true,
     },
   ];
 
@@ -36,6 +38,7 @@ console.log("test");
     for (const task of tasks) {
       htmlString += `
         <li${task.done ? ' style="text-decoration: line-through"' : ""}>
+        <button class="js-highLight">⭐</button>
         <button class="js-done">✅</button>
         ${task.content}
         <button class="js-remove">❌</button>
@@ -60,6 +63,8 @@ console.log("test");
         toggleTaskDone(index);
       });
     });
+
+    const highLightButtons = document.querySelectorAll(".js-highLight");
   };
 
   const onFormSubmit = (event) => {
