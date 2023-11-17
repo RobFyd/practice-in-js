@@ -32,6 +32,11 @@ console.log("test");
     render();
   };
 
+  const toggleTaskHighLight = (taskIndex) => {
+    tasks[taskIndex].important = !tasks[taskIndex].important;
+    render();
+  };
+
   const render = () => {
     let htmlString = "";
 
@@ -64,7 +69,13 @@ console.log("test");
       });
     });
 
-    const highLightButtons = document.querySelectorAll(".js-highLight");
+    const toggleHighLightButtons = document.querySelectorAll(".js-highLight");
+
+    toggleHighLightButtons.forEach((toggleHighLightButton, index) => {
+      toggleHighLightButton.addEventListener("click", () => {
+        toggleTaskHighLight(index);
+      });
+    });
   };
 
   const onFormSubmit = (event) => {
