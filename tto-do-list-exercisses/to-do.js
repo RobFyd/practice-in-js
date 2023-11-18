@@ -37,22 +37,7 @@ console.log("test");
     render();
   };
 
-  const render = () => {
-    let htmlString = "";
-
-    for (const task of tasks) {
-      htmlString += `
-        <li${task.done ? ' style="text-decoration: line-through"' : ""}${task.important ? ' style="background-color: yellow"' : ""}>
-        <button class="js-highLight">⭐</button>
-        <button class="js-done">✅</button>
-        ${task.content}
-        <button class="js-remove">❌</button>
-        </li>
-    `;
-    }
-
-    document.querySelector(".js-tasks").innerHTML = htmlString;
-
+  const bindEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
@@ -76,6 +61,27 @@ console.log("test");
         toggleTaskHighLight(index);
       });
     });
+  };
+
+  const render = () => {
+    let htmlString = "";
+
+    for (const task of tasks) {
+      htmlString += `
+        <li${task.done ? ' style="text-decoration: line-through"' : ""}${
+        task.important ? ' style="background-color: yellow"' : ""
+      }>
+        <button class="js-highLight">⭐</button>
+        <button class="js-done">✅</button>
+        ${task.content}
+        <button class="js-remove">❌</button>
+        </li>
+    `;
+    }
+
+    document.querySelector(".js-tasks").innerHTML = htmlString;
+
+    bindEvents();
   };
 
   const onFormSubmit = (event) => {
