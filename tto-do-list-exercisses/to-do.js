@@ -5,12 +5,12 @@ console.log("test");
     {
       content: "example task 1",
       done: false,
-      important: false,
+      important: true,
     },
     {
       content: "example task 2",
       done: true,
-      important: true,
+      important: false,
     },
   ];
 
@@ -18,7 +18,6 @@ console.log("test");
     tasks.push({
       content: newTaskContent,
     });
-
     render();
   };
 
