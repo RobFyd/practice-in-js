@@ -42,7 +42,7 @@ console.log("test");
 
     for (const task of tasks) {
       htmlString += `
-        <li${task.done ? ' style="text-decoration: line-through"' : ""}>
+        <li${task.done ? ' style="text-decoration: line-through"' : ""}${task.important ? ' style="background-color: yellow"' : ""}>
         <button class="js-highLight">⭐</button>
         <button class="js-done">✅</button>
         ${task.content}
