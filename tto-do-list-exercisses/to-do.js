@@ -104,4 +104,12 @@ console.log("test");
   };
 
   init();
+
+
+  
+  var button = document.querySelector(".js-clearAll");
+
+  button.addEventListener("click", function() {
+    button.classList.toggle("with-emoji");
+  });
 }
