@@ -86,8 +86,10 @@ console.log("test");
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    document.querySelector(".js-newTask").focus();
 
+    const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    
     if (newTaskContent === "") {
       return;
     }
