@@ -67,9 +67,15 @@ console.log("test");
 
     for (const task of tasks) {
       htmlString += `
-        <li class="list__item${task.done ? " list__item--done" : ""}${task.important ? " list__item--highLight" : ""}">
-        <button class="js-highLight${task.important ? " js-highLight__active" : ""}">⭐</button>
-        <button class="js-done${task.done ? " js-done__active" : ""}">✅</button>
+        <li class="list__item${task.done ? " list__item--done" : ""}${
+        task.important ? " list__item--highLight" : ""
+      }">
+        <button class="js-highLight${
+          task.important ? " js-highLight__active" : ""
+        }">⭐</button>
+        <button class="js-done${
+          task.done ? " js-done__active" : ""
+        }">✅</button>
         ${task.content}
         <button class="js-remove">❌</button>
         </li>
@@ -77,6 +83,14 @@ console.log("test");
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
+
+    document.querySelector(".js-stats").innerText = `
+    Number of all tasks: ${tasks.length}\n
+    Number of done tasks: ${tasks.filter((task) => task.done).length}\n
+    Number of highLight tasks: ${
+      tasks.filter((task) => task.important).length
+    }\n
+    `;
 
     bindEvents();
   };
@@ -87,7 +101,7 @@ console.log("test");
     document.querySelector(".js-newTask").focus();
 
     const newTaskContent = document.querySelector(".js-newTask").value.trim();
-    
+
     if (newTaskContent === "") {
       return;
     }
@@ -105,11 +119,9 @@ console.log("test");
 
   init();
 
-
-  
   var button = document.querySelector(".js-clearAll");
 
-  button.addEventListener("click", function() {
+  button.addEventListener("click", function () {
     button.classList.toggle("with-emoji");
   });
 }
