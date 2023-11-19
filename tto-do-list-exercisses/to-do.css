@@ -7,5 +7,14 @@ html {
 }
 
 body {
+    background-color: lightblue;
     margin: 20px;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.list__item--highLight {
+    background-color: yellow;
 }
