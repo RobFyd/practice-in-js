@@ -68,8 +68,8 @@ console.log("test");
     for (const task of tasks) {
       htmlString += `
         <li class="list__item${task.done ? " list__item--done" : ""}${task.important ? " list__item--highLight" : ""}">
-        <button class="js-highLight">⭐</button>
-        <button class="js-done">✅</button>
+        <button class="js-highLight${task.important ? " js-highLight__active" : ""}">⭐</button>
+        <button class="js-done${task.done ? " js-done__active" : ""}">✅</button>
         ${task.content}
         <button class="js-remove">❌</button>
         </li>
