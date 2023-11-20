@@ -22,3 +22,4 @@ Practical exercises in JavaScript. In the history of the repository you will fin
 - js classes
 - svg's
 - fetchXML
+- to-do-list
