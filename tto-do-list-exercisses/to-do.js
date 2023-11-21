@@ -36,7 +36,7 @@ console.log("test");
     render();
   };
 
-  const bindEvents = () => {
+  const bindRemoveEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
@@ -44,7 +44,9 @@ console.log("test");
         removeTask(index);
       });
     });
+  };
 
+  const bindToggleDoneEvents = () => {
     const toggleDoneButtons = document.querySelectorAll(".js-done");
 
     toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -52,15 +54,15 @@ console.log("test");
         toggleTaskDone(index);
       });
     });
-
-    const toggleHighLightButtons = document.querySelectorAll(".js-highLight");
-
-    toggleHighLightButtons.forEach((toggleHighLightButton, index) => {
-      toggleHighLightButton.addEventListener("click", () => {
-        toggleTaskHighLight(index);
-      });
-    });
   };
+
+  const toggleHighLightButtons = document.querySelectorAll(".js-highLight");
+
+  toggleHighLightButtons.forEach((toggleHighLightButton, index) => {
+    toggleHighLightButton.addEventListener("click", () => {
+      toggleTaskHighLight(index);
+    });
+  });
 
   const render = () => {
     let htmlString = "";
@@ -92,7 +94,8 @@ console.log("test");
     }\n
     `;
 
-    bindEvents();
+    bindToggleDoneEvents();
+    bindRemoveEvents();
   };
 
   const onFormSubmit = (event) => {
