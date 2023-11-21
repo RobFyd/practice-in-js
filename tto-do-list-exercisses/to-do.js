@@ -56,13 +56,15 @@ console.log("test");
     });
   };
 
-  const toggleHighLightButtons = document.querySelectorAll(".js-highLight");
+  const bindToggleHighLightEvents = () => {
+    const toggleHighLightButtons = document.querySelectorAll(".js-highLight");
 
-  toggleHighLightButtons.forEach((toggleHighLightButton, index) => {
-    toggleHighLightButton.addEventListener("click", () => {
-      toggleTaskHighLight(index);
+    toggleHighLightButtons.forEach((toggleHighLightButton, index) => {
+      toggleHighLightButton.addEventListener("click", () => {
+        toggleTaskHighLight(index);
+      });
     });
-  });
+  };
 
   const render = () => {
     let htmlString = "";
@@ -94,6 +96,7 @@ console.log("test");
     }\n
     `;
 
+    bindToggleHighLightEvents();
     bindToggleDoneEvents();
     bindRemoveEvents();
   };
