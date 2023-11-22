@@ -83,7 +83,10 @@ console.log("test");
         task.done ? "✅" : "✔️"
       }</button>
       
-        ${task.content}
+        <span class="task__content ${task.done ? "task__content--done" : ""}">${
+        task.content
+      }</span>
+
         <button class="js-remove">❌</button>
         </li>
     `;
