@@ -67,26 +67,29 @@ console.log("test");
   };
 
   const render = () => {
-    let htmlString = "";
+    let tasksListHTMLcontent = "";
 
     for (const task of tasks) {
-      htmlString += `
+      tasksListHTMLcontent += `
         <li class="list__item${task.done ? " list__item--done" : ""}${
         task.important ? " list__item--highLight" : ""
       }">
+
         <button class="js-highLight${
           task.important ? " js-highLight__active" : ""
-        }">⭐</button>
-        <button class="js-done${
-          task.done ? " js-done__active" : ""
-        }">✅</button>
+        }">${task.important ? "💫" : "⭐"}</button>
+        
+        <button class="js-done${task.done ? " js-done__active" : ""}">${
+        task.done ? "✅" : "✔️"
+      }</button>
+      
         ${task.content}
         <button class="js-remove">❌</button>
         </li>
     `;
     }
 
-    document.querySelector(".js-tasks").innerHTML = htmlString;
+    document.querySelector(".js-tasks").innerHTML = tasksListHTMLcontent;
 
     document.querySelector(".js-stats").innerText = `
     Number of all tasks: ${tasks.length}\n

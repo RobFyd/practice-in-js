@@ -16,6 +16,8 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    border: solid 1px black;
+    border-radius: 2px;
 }
 
 .js-newTask:focus {
