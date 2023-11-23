@@ -67,7 +67,6 @@ console.log("test");
   };
 
   const renderButtons = () => {
-
     document.querySelector(".js-buttons").innerHTML = `
     <button class="button__hideCompleted js-hideCompleted">Hide completed</button>
 
@@ -90,9 +89,9 @@ console.log("test");
           task.important ? " task__highLight--active" : ""
         }">${task.important ? "💫" : "⭐"}</button>
         
-        <button class="task__done js-done${task.done ? " task__done--active" : ""}">${
-        task.done ? "✅" : "✔️"
-      }</button>
+        <button class="task__done js-done${
+          task.done ? " task__done--active" : ""
+        }">${task.done ? "✅" : "✔️"}</button>
       
         <span class="task__content ${task.done ? "task__content--done" : ""}">${
         task.content
@@ -143,10 +142,13 @@ console.log("test");
   };
 
   init();
+}
 
-  var button = document.querySelector(".js-clearAll");
-
-  button.addEventListener("click", function () {
+{
+  const showThumbUp = () => {
     button.classList.toggle("with-emoji");
-  });
+  };
+  const button = document.querySelector(".js-thumbUp");
+
+  button.addEventListener("click", showThumbUp);
 }
