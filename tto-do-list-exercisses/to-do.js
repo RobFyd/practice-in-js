@@ -86,11 +86,11 @@ console.log("test");
         task.important ? " list__item--highLight" : ""
       }">
 
-        <button class="js-highLight${
-          task.important ? " js-highLight__active" : ""
+        <button class="task__highLight js-highLight${
+          task.important ? " task__highLight--active" : ""
         }">${task.important ? "💫" : "⭐"}</button>
         
-        <button class="js-done${task.done ? " js-done__active" : ""}">${
+        <button class="task__done js-done${task.done ? " task__done--active" : ""}">${
         task.done ? "✅" : "✔️"
       }</button>
       
@@ -98,7 +98,7 @@ console.log("test");
         task.content
       }</span>
 
-        <button class="js-remove">❌</button>
+        <button class="task__remove js-remove">❌</button>
         </li>
     `;
     }

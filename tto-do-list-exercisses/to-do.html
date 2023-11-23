@@ -27,8 +27,10 @@
     <form class="js-form">
       <div>
         <h2>Add task</h2>
-        <input class="js-newTask" autofocus />
-        <button class="js-addTask">Add new task</button>
+        <form class="form">
+          <input class="form__field js-newTask" autofocus />
+          <button class="form__button js-addTask">Add new task</button>
+        </form>
       </div>
     </form>
     <div>
@@ -36,9 +38,9 @@
         <h2>Tasks list</h2>
         <div class="section__buttons js-buttons"></div>
       </div>
-      <ul class="js-tasks"></ul>
+      <ul class="tasks js-tasks"></ul>
     </div>
     <div class="js-stats"></div>
-    <button class="js-clearAll"></button>
+    <button class="clearAll js-clearAll"></button>
   </body>
 </html>

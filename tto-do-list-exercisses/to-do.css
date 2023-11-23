@@ -11,23 +11,7 @@ body {
     margin: 20px;
 }
 
-.section__buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.js-tasks {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.js-newTask {
+.form__field {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +20,22 @@ body {
     border-radius: 2px;
 }
 
-.js-newTask:focus {
+.section__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.form__field:focus {
     background-color: lightgoldenrodyellow;
     outline: none;
     border: solid 1px black;
@@ -53,31 +52,27 @@ body {
     padding: 5px;
 }
 
-.js-highLight {
+.task__highLight {
     border-radius: 2px;
     border: 1px solid black;
 }
 
-.js-highLight__active {
+.task__highLight--active {
     border-radius: 2px;
     border: 1px solid yellow;
     background-color: black;
 }
 
-/* .list__item--done {
-    text-decoration: line-through;
-} */
-
 .list__item--highLight {
     background-color: yellow;
 }
 
-.js-done {
+.task__done {
     border-radius: 2px;
     border: 1px solid black;
 }
 
-.js-done__active {
+.task__done--active {
     background-color: #00d26a;
     border-radius: 2px;
     border: 1px solid black;
@@ -87,13 +82,25 @@ body {
     text-decoration: line-through;
 }
 
-.js-remove {
+.task__remove {
     background-color: #ffd0d0;
     border-radius: 2px;
     border: 1px solid red;
 }
 
-.js-clearAll {
+.task__remove:hover {
+    background-color: palevioletred;
+    border-radius: 2px;
+    border: 1px solid red;
+}
+
+.task__remove:active {
+    background-color: crimson;
+    border-radius: 2px;
+    border: 1px solid crimson;
+}
+
+.clearAll {
     background-color: #4CAF50;
       color: white;
       padding: 10px 20px;
