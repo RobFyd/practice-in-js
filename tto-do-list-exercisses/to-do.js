@@ -66,6 +66,17 @@ console.log("test");
     });
   };
 
+  const renderButtons = () => {
+
+    document.querySelector(".js-buttons").innerHTML = `
+    <button class="button__hideCompleted js-hideCompleted">Hide completed</button>
+
+    <button class="button__completeAll js-completeAll ${
+      tasks.every(({ done }) => done) ? "disabled" : ""
+    }">Complete all</button>
+    `;
+  };
+
   const render = () => {
     let tasksListHTMLcontent = "";
 
@@ -123,6 +134,7 @@ console.log("test");
   };
 
   const init = () => {
+    renderButtons();
     render();
 
     const form = document.querySelector(".js-form");

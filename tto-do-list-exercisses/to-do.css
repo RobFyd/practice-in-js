@@ -11,6 +11,13 @@ body {
     margin: 20px;
 }
 
+.section__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .js-tasks {
     display: flex;
     flex-direction: column;
