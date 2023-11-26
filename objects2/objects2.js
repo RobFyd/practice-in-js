@@ -43,3 +43,18 @@
     console.log(exchangeData);
     document.querySelector(".js-rates").innerText = `first rate: ${exchangeData.USD}\n second rate: ${exchangeData[currency]}\n third rate: ${exchangeData.GBP}`;
 }
+
+// destructuring
+
+{
+  const person = {
+    name: "Rob",
+    surname: "Soares",
+    age: 32,
+    color: "blue",
+  };
+
+  const { name, surname, age, color } = person;
+
+  console.log(name, surname, age, color);
+}
