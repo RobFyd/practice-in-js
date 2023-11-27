@@ -54,7 +54,8 @@
     color: "blue",
   };
 
-  const { name, surname, age, color } = person;
+  const { name, surname, ...rest } = person;
 
-  console.log(name, surname, age, color);
+  console.log(name, surname, rest);
+  document.querySelector(".js-details").innerText = `first detail: ${person.name}\n second detail: ${person.surname}\n third detail: ${person.rest}`;
 }
