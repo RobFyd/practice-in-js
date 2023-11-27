@@ -54,8 +54,8 @@
     color: "blue",
   };
 
-  const { name, surname, ...rest } = person;
+  const { name, surname: lastName, city = "N/A", ...rest } = person;
 
-  console.log(name, surname, rest);
-  document.querySelector(".js-details").innerText = `first detail: ${person.name}\n second detail: ${person.surname}\n third detail: ${JSON.stringify(rest)}`; // JSON.stringify() converts a JavaScript object or value to a JSON string
+  console.log(name, lastName, city, rest);
+  document.querySelector(".js-details").innerText = `first detail: ${person.name}\n second detail: ${lastName}\n third detail: ${city}\n fourth detail: ${JSON.stringify(rest)}`; // JSON.stringify() converts a JavaScript object or value to a JSON string
 }
