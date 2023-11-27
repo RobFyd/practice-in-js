@@ -40,8 +40,10 @@
     GBP: 4.7,
   };
 
-    console.log(exchangeData);
-    document.querySelector(".js-rates").innerText = `first rate: ${exchangeData.USD}\n second rate: ${exchangeData[currency]}\n third rate: ${exchangeData.GBP}`;
+  console.log(exchangeData);
+  document.querySelector(
+    ".js-rates"
+  ).innerText = `first rate: ${exchangeData.USD}\n second rate: ${exchangeData[currency]}\n third rate: ${exchangeData.GBP}`;
 }
 
 // destructuring
@@ -57,11 +59,36 @@
   const { name, surname: lastName, city = "N/A", ...rest } = person;
 
   console.log(name, lastName, city, rest);
-  document.querySelector(".js-details").innerText = `first detail: ${person.name}\n second detail: ${lastName}\n third detail: ${city}\n fourth detail: ${JSON.stringify(rest)}`; // JSON.stringify() converts a JavaScript object or value to a JSON string
+  document.querySelector(".js-details").innerText = `first detail: ${
+    person.name
+  }\n second detail: ${lastName}\n third detail: ${city}\n fourth detail: ${JSON.stringify(
+    rest
+  )}`; // JSON.stringify() converts a JavaScript object or value to a JSON string
 
   const getPersonFullName = ({ name, surname }) => `${name} ${surname}`;
   console.log(getPersonFullName(person));
   document.querySelector(".js-fullName").innerHTML = `
             <span>Nice to meet you. I am ${getPersonFullName(person)}</span>
+            `;
+}
+
+// destructuring in a nested object
+
+{
+  const person = {
+    name: "John",
+    surname: "Doe",
+    father: {
+      name: "Peter",
+      surname: "Doe",
+      age: 55,
+    },
+  };
+
+  const {father: {name: fatherName}} = person;
+  console.log(fatherName);
+
+  document.querySelector(".js-fullName").innerHTML = `
+            <span>Nice to meet you. I am ${(fatherName)}</span>
             `;
 }
