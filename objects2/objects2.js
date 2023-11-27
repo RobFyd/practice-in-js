@@ -57,5 +57,5 @@
   const { name, surname, ...rest } = person;
 
   console.log(name, surname, rest);
-  document.querySelector(".js-details").innerText = `first detail: ${person.name}\n second detail: ${person.surname}\n third detail: ${person.rest}`;
+  document.querySelector(".js-details").innerText = `first detail: ${person.name}\n second detail: ${person.surname}\n third detail: ${JSON.stringify(rest)}`; // JSON.stringify() converts a JavaScript object or value to a JSON string
 }
