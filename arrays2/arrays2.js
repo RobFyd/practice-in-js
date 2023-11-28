@@ -11,10 +11,24 @@
 // mergring arrays
 
 {
-    const numbers1 = [11, 22, 33];
-    const numbers2 = [44, 55, 66];
-    
-    const allNumbers = [...numbers1, ...numbers2];
-    
-    console.log(allNumbers);
+  const numbers1 = [11, 22, 33];
+  const numbers2 = [44, 55, 66];
+
+  const allNumbers = [
+    ...numbers1,            // spread operator/syntax
+    ...numbers2,            // spread operator/syntax
+    9898,                   // adding new element
+  ];
+
+  console.log(allNumbers);
+}
+
+// cloning/copy arrays
+
+{
+const numbers = [111, 222, 333];
+
+const numbersCopy = [...numbers];
+
+console.log(numbersCopy);
 }
