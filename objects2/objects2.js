@@ -115,9 +115,9 @@
   };
 
   console.log(allPersonData);
-  document.querySelector(
-    ".js-connectingObjects"
-  ).innerText = `Data: ${JSON.stringify(allPersonData)}`;
+  document.querySelector(".js-merging").innerText = `Data: ${JSON.stringify(
+    allPersonData
+  )}`;
 }
 
 // cloning
@@ -132,7 +132,7 @@
     },
   };
 
-  const personCopy = { ...person };   // spead syntax
+  const personCopy = { ...person }; // spead syntax
 
   console.log(personCopy);
   document.querySelector(".js-cloning").innerText = `Cloning: ${JSON.stringify(
@@ -141,4 +141,19 @@
 
   console.log(person === personCopy); // false
   console.log(person.father === personCopy.father); // true
+}
+
+// for...in loop
+
+{
+  const person = {
+    name: "Bobie",
+    surname: "Awsome",
+  };
+
+  for (const property in person) {
+    console.log(property);
+    console.log(property, person[property]);
+    console.log(`${property}: ${person[property]}`);
+  }
 }
