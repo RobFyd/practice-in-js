@@ -28,7 +28,15 @@
 {
 const numbers = [111, 222, 333];
 
-const numbersCopy = [...numbers];
+const numbersCopy = [...numbers];       // shaloow copy
 
 console.log(numbersCopy);
+}
+
+// forwarding elements
+
+{
+    const numbers = [111, 222, 333];
+
+    console.log(...numbers);
 }
