@@ -68,7 +68,7 @@
   const getPersonFullName = ({ name, surname }) => `${name} ${surname}`;
   console.log(getPersonFullName(person));
   document.querySelector(".js-fullName").innerHTML = `
-            <span>Nice to meet you. I am ${getPersonFullName(person)}</span>
+            <span>I am ${getPersonFullName(person)}!!!</span>
             `;
 }
 
@@ -79,16 +79,66 @@
     name: "John",
     surname: "Doe",
     father: {
-      name: "Peter",
+      name: "Poter",
       surname: "Doe",
       age: 55,
     },
   };
 
-  const {father: {name: fatherName}} = person;
+  const {
+    father: { name: fatherName },
+  } = person;
   console.log(fatherName);
 
-  document.querySelector(".js-fullName").innerHTML = `
-            <span>Nice to meet you. I am ${(fatherName)}</span>
+  document.querySelector(".js-fatherName").innerHTML = `
+            <span>Nice to meet you. I am ${fatherName}</span>
             `;
+}
+
+// connecting objects
+
+{
+  cons = personBasicData = {
+    name: "Robbie",
+    surname: "Suades",
+  };
+
+  const personAditionalData = {
+    age: 32,
+    city: "Lisbon",
+  };
+
+  const allPersonData = {
+    ...personBasicData,
+    ...personAditionalData,
+    gender: "male",
+  };
+
+  console.log(allPersonData);
+  document.querySelector(
+    ".js-connectingObjects"
+  ).innerText = `Data: ${JSON.stringify(allPersonData)}`;
+}
+
+// cloning
+
+{
+  const person = {
+    name: "Bob",
+    surname: "Loblaw",
+    father: {
+      name: "Poter",
+      surname: "Loblaw",
+    },
+  };
+
+  const personCopy = { ...person };   // spead syntax
+
+  console.log(personCopy);
+  document.querySelector(".js-cloning").innerText = `Cloning: ${JSON.stringify(
+    personCopy
+  )}`;
+
+  console.log(person === personCopy); // false
+  console.log(person.father === personCopy.father); // true
 }
