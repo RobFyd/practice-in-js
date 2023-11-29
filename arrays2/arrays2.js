@@ -6,6 +6,10 @@
   const [num1, num2, , num4, num5 = 0, ...rest] = numbers;
 
   console.log(num2, num4, num5, rest);
+
+  document.querySelector(".js-destructuring").innerText = `
+    Show me num2: ${num2}, num4: ${num4}, num5: ${num5}, rest: ${rest} no rest!
+  `;
 }
 
 // mergring arrays
@@ -15,28 +19,36 @@
   const numbers2 = [44, 55, 66];
 
   const allNumbers = [
-    ...numbers1,            // spread operator/syntax
-    ...numbers2,            // spread operator/syntax
-    9898,                   // adding new element
+    ...numbers1, // spread operator/syntax
+    ...numbers2, // spread operator/syntax
+    9898, // adding new element
   ];
 
   console.log(allNumbers);
+
+    document.querySelector(".js-merging").innerText = `
+        Show numbers from both arrays: ${allNumbers.join(", ")}
+    `;
 }
 
 // cloning/copy arrays
 
 {
-const numbers = [111, 222, 333];
+  const numbers = [111, 222, 333];
 
-const numbersCopy = [...numbers];       // shaloow copy
+  const numbersCopy = [...numbers]; // shaloow copy
 
-console.log(numbersCopy);
+  console.log(numbersCopy);
 }
 
-// forwarding elements
+// passing array elements as a function argument
 
 {
-    const numbers = [111, 222, 333];
+  const numbers = [55, 44, 33, 22, 11];
 
-    console.log(...numbers);
+  const minimum = Math.min(...numbers);     // spread operator/syntax
+  console.log(minimum);
+
+  const maximum = Math.max(...numbers);     // spread operator/syntax
+  console.log(maximum);
 }
