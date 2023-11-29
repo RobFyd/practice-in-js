@@ -12,6 +12,7 @@
   console.log(person);
 }
 
+
 // abbreviated notation: methods
 
 {
@@ -29,6 +30,7 @@
   person.sayHello();
 }
 
+
 // computed property names
 
 {
@@ -45,6 +47,7 @@
     ".js-rates"
   ).innerText = `first rate: ${exchangeData.USD}\n second rate: ${exchangeData[currency]}\n third rate: ${exchangeData.GBP}`;
 }
+
 
 // destructuring
 
@@ -72,6 +75,7 @@
             `;
 }
 
+
 // destructuring in a nested object
 
 {
@@ -94,6 +98,7 @@
             <span>Nice to meet you. I am ${fatherName}</span>
             `;
 }
+
 
 // connecting objects
 
@@ -118,7 +123,22 @@
   document.querySelector(".js-merging").innerText = `Data: ${JSON.stringify(
     allPersonData
   )}`;
+
+  // to string
+
+  let dataString = "Data as a string: ";
+  for (let key in allPersonData) {
+    if (allPersonData.hasOwnProperty(key)) {
+      dataString += `${key}: ${allPersonData[key]}, `;
+    }
+  }
+
+  // remove the last comma and spaces
+  dataString = dataString.slice(0, -2);
+
+  document.querySelector(".js-mergingToString").innerText = dataString;
 }
+
 
 // cloning
 
@@ -142,6 +162,7 @@
   console.log(person === personCopy); // false
   console.log(person.father === personCopy.father); // true
 }
+
 
 // for...in loop
 
