@@ -66,7 +66,9 @@
 {
   const myFunction = (firstParameter, ...otherParameters) => {
     console.log(`First parameter: ${firstParameter}`);
+    // First parameter: 120
     console.log(`Number of other parameters: ${otherParameters.length}`); // .length - number of elements in array
+    // Number of other parameters: 8
   };
 
   myFunction(120, 220, 320, 420, 520, 620, 720, 820, 920);
