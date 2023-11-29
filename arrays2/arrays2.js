@@ -56,7 +56,18 @@
   const maximum = Math.max(...numbers); // spread operator/syntax
   console.log(maximum);
 
-    document.querySelector(".js-passing").innerText = `
+  document.querySelector(".js-passing").innerText = `
             Show minimum: ${minimum}, and maximum: ${maximum}
         `;
+}
+
+// undefined number of function arguments
+
+{
+  const myFunction = (firstParameter, ...otherParameters) => {
+    console.log(`First parameter: ${firstParameter}`);
+    console.log(`Number of other parameters: ${otherParameters.length}`); // .length - number of elements in array
+  };
+
+  myFunction(120, 220, 320, 420, 520, 620, 720, 820, 920);
 }
