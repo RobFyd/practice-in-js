@@ -26,8 +26,8 @@
 
   console.log(allNumbers);
 
-    document.querySelector(".js-merging").innerText = `
-        Show numbers from both arrays: ${allNumbers.join(", ")}
+  document.querySelector(".js-merging").innerText = `
+        Show numbers from both arrays and extra number: ${allNumbers.join(", ")}
     `;
 }
 
@@ -39,6 +39,10 @@
   const numbersCopy = [...numbers]; // shaloow copy
 
   console.log(numbersCopy);
+
+  document.querySelector(".js-copy").innerText = `
+        Show numbers copy: ${numbersCopy.join(", ")}
+  `;
 }
 
 // passing array elements as a function argument
@@ -46,9 +50,13 @@
 {
   const numbers = [55, 44, 33, 22, 11];
 
-  const minimum = Math.min(...numbers);     // spread operator/syntax
+  const minimum = Math.min(...numbers); // spread operator/syntax
   console.log(minimum);
 
-  const maximum = Math.max(...numbers);     // spread operator/syntax
+  const maximum = Math.max(...numbers); // spread operator/syntax
   console.log(maximum);
+
+    document.querySelector(".js-passing").innerText = `
+            Show minimum: ${minimum}, and maximum: ${maximum}
+        `;
 }
