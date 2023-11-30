@@ -95,18 +95,32 @@
 {
   const letters = ["a", "b", "c", "d", 5, "a"];
 
-  const indexOfC = letters.indexOf("c");  // indexOf() - returns the first index at which a given element can be found in the array, or -1 if it is not present.
+  const indexOfC = letters.indexOf("c"); // indexOf() - returns the first index at which a given element can be found in the array, or -1 if it is not present.
   console.log(indexOfC);
 
   const indexOfA = letters.indexOf("a");
   console.log(indexOfA);
 
-  const lastIndexOfA = letters.lastIndexOf("a");  // lastIndexOf() - returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+  const lastIndexOfA = letters.lastIndexOf("a"); // lastIndexOf() - returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
   console.log(lastIndexOfA);
 
   const lastIndexOf5 = letters.indexOf(5);
   console.log(lastIndexOf5);
 
-  const indexOfZ = letters.indexOf("z");  // -1 if it is not present.
+  const indexOfZ = letters.indexOf("z"); // -1 if it is not present.
   console.log(indexOfZ);
+}
+
+// find
+
+{
+  const numbers = [-7, 0, 10, -6, 45];
+
+  const firstPositiveNumber = numbers.find(number => number > 0); // find() - returns the value of the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+
+  console.log(firstPositiveNumber);
+
+  const greaterThanTen = numbers.find(number => number > 10);
+
+  console.log(greaterThanTen);
 }
