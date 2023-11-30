@@ -77,16 +77,15 @@
 // extrating array elements
 
 {
-  const season = ["winter", "spring", "summer", "autumn"];
+  const seasons = ["winter", "spring", "summer", "autumn"];
 
-  const last2Seasons = season.slice(-2); // slice() - returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.
-  const middle2Seasons = season.slice(1, 3); // slice() - returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.
-  const last2Seasons2 = season.slice(2); // slice() - returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.
-  const allButLastSeason = season.slice(0, -1); // slice() - returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.
+  const last2Seasons = seasons.slice(2); // slice() - returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array.
+  const middle2Seasons = seasons.slice(1, 3); 
+  const last3Seasons = seasons.slice(-3); 
+  const allButWithoutLast = seasons.slice(0, -1);
 
   console.log(last2Seasons);
   console.log(middle2Seasons);
-  console.log(last2Seasons2);
-  console.log(allButLastSeason);
-
+  console.log(last3Seasons);
+  console.log(allButWithoutLast);
 }
