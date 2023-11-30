@@ -80,12 +80,33 @@
   const seasons = ["winter", "spring", "summer", "autumn"];
 
   const last2Seasons = seasons.slice(2); // slice() - returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array.
-  const middle2Seasons = seasons.slice(1, 3); 
-  const last3Seasons = seasons.slice(-3); 
+  const middle2Seasons = seasons.slice(1, 3);
+  const last3Seasons = seasons.slice(-3);
   const allButWithoutLast = seasons.slice(0, -1);
 
   console.log(last2Seasons);
   console.log(middle2Seasons);
   console.log(last3Seasons);
   console.log(allButWithoutLast);
+}
+
+// indexOf() and lastIndexOf() find element in array
+
+{
+  const letters = ["a", "b", "c", "d", 5, "a"];
+
+  const indexOfC = letters.indexOf("c");  // indexOf() - returns the first index at which a given element can be found in the array, or -1 if it is not present.
+  console.log(indexOfC);
+
+  const indexOfA = letters.indexOf("a");
+  console.log(indexOfA);
+
+  const lastIndexOfA = letters.lastIndexOf("a");  // lastIndexOf() - returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+  console.log(lastIndexOfA);
+
+  const lastIndexOf5 = letters.indexOf(5);
+  console.log(lastIndexOf5);
+
+  const indexOfZ = letters.indexOf("z");  // -1 if it is not present.
+  console.log(indexOfZ);
 }
