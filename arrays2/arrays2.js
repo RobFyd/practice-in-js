@@ -118,9 +118,21 @@
 
   const firstPositiveNumber = numbers.find(number => number > 0); // find() - returns the value of the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
 
-  console.log(firstPositiveNumber);
+  console.log(firstPositiveNumber); // 10
 
-  const greaterThanTen = numbers.find(number => number > 10);
+  const firstgreaterThanTen = numbers.find(number => number > 10);
 
-  console.log(greaterThanTen);
+  console.log(firstgreaterThanTen); // 0
+
+  const firstEvenNumber = numbers.find(number => number % 2 === 0);
+
+  console.log(firstEvenNumber); // 0
+
+  const firstOddNumber = numbers.find(number => number % 2 !== 0);
+  
+  console.log(firstOddNumber); // -7
+
+  const firstSmallerThanZero = numbers.find(number => number < 0);
+
+  console.log(firstSmallerThanZero); // -7
 }
