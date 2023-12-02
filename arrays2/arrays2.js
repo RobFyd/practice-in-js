@@ -147,4 +147,14 @@ const fruits = [
 
 const findApple = fruits.find(({ name }) => name === "apple");
 
+const firstPurpleFruit = fruits.find(({ color }) => color === "purple");
+
 console.log(findApple); // { name: 'apple', color: 'red' }
+
+console.log(firstPurpleFruit); // { name: 'grape', color: 'purple' }
+
+// findIndex
+
+{
+  
+}
