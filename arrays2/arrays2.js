@@ -137,7 +137,7 @@
   console.log(firstSmallerThanZero); // -7
 }
 
-// find object in array
+// find object in array, findIndex
 
 const fruits = [
   { name: "apple", color: "red" },
@@ -153,8 +153,43 @@ console.log(findApple); // { name: 'apple', color: 'red' }
 
 console.log(firstPurpleFruit); // { name: 'grape', color: 'purple' }
 
-// findIndex
+const appleIndex = fruits.findIndex(({ name }) => name === "apple");
+
+console.log(appleIndex); // 0
+
+const firstPurpleFruitIndex = fruits.findIndex(
+  ({ color }) => color === "purple"
+);
+
+console.log(firstPurpleFruitIndex); // 2
+
+// includes
 
 {
-  
+  const guests = ["John", "Peter", "Kate"];
+
+  const isKateComing = guests.includes("Kate"); // includes() - determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+  console.log(isKateComing); // true
+}
+
+// some, every
+
+{
+  const tasks = [
+    { content: "Wash dishes", completed: false },
+    { content: "Feed the cat", completed: true },
+  ];
+
+  const isAnyTaskDone = tasks.some(({ completed }) => completed);
+
+  console.log(isAnyTaskDone); // true
+
+  const numbers = [1, 3, 5, 7];
+
+  const isEven = (number) => number % 2 === 0;
+
+  const isAnyNumberEven = numbers.some(isEven);
+
+  console.log(isAnyNumberEven); // false
 }
