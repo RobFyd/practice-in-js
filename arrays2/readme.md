@@ -7,3 +7,8 @@
 - extrating array elements
 - indexOf() and lastIndexOf() find element in array
 - find
+- find object in array, findIndex
+- includes
+- some, every
+- filter
+- map

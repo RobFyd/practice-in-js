@@ -8,7 +8,7 @@
   console.log(num2, num4, num5, rest);
 
   document.querySelector(".js-destructuring").innerText = `
-    Show me num2: ${num2}, num4: ${num4}, num5: ${num5}, rest: ${rest} no rest!
+    Show me\n num2: ${num2}\n num4: ${num4}\n num5: ${num5}\n rest: ${rest} no rest!
   `;
 }
 
@@ -229,4 +229,22 @@ console.log(firstPurpleFruitIndex); // 2
   const tasksUndone = tasks.filter(isUndone);
 
   console.log(tasksUndone); // [ { content: 'Wash dishes', completed: false } ]
+}
+
+// map
+
+{
+  const numbers = [1, 5, 9];
+
+  const double = (number) => number * 2;
+  const triple = (number) => number * 3;
+
+  const doubledNumbers = numbers.map(double); // map() - creates a new array populated with the results of calling a provided function on every element in the calling array.
+  const tripledNumbers = numbers.map(triple);
+
+  document.querySelector(".js-doubled").innerText = `
+        Numbers: ${numbers.join(", ")}\n Doubled numbers: ${doubledNumbers.join(
+    ", "
+  )}\n Triple: ${tripledNumbers.join(", ")}
+  `;
 }
