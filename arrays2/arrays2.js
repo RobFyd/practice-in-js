@@ -247,4 +247,33 @@ console.log(firstPurpleFruitIndex); // 2
     ", "
   )}\n Triple: ${tripledNumbers.join(", ")}
   `;
+
+  const workers = [
+    { name: "John", position: "developer" },
+    { name: "Kate", position: "manager" },
+    { name: "Mike", position: "designer" },
+  ];
+
+  const positions = workers.map((worker) => worker.position);
+
+  console.log(positions); // [ 'developer', 'manager' ]
+
+  const getFullDetails = ({ name, position }) => `${name} - ${position}`;
+
+  document.querySelector(".js-workers").innerText = `
+        Workers:\n ${workers.map(getFullDetails).join(", \n")}
+  `;
+
+  const workersAsListItems = workers.map(
+    (worker) => `
+  <li>
+  ${getFullDetails(worker)}
+  </li>
+  `
+  );
+
+  console.log(workersAsListItems.join(""));
+
+  document.querySelector(".js-workersList").innerHTML =
+    workersAsListItems.join("");
 }
