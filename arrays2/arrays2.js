@@ -201,3 +201,32 @@ console.log(firstPurpleFruitIndex); // 2
 
   console.log(isEveryNumberEven); // false
 }
+
+// filter
+
+{
+  const numbers = [1, 8, 22, 45, 67, 88];
+
+  const isEven = (number) => number % 2 === 0;
+
+  const isOdd = (number) => number % 2 !== 0;
+
+  const evenNumbers = numbers.filter(isEven); // filter() - creates a new array with all elements that pass the test implemented by the provided function.
+
+  console.log(evenNumbers); // [ 8, 22, 88 ]
+
+  const oddNumbers = numbers.filter(isOdd);
+
+  console.log(oddNumbers); // [ 1, 45, 67 ]
+
+  const tasks = [
+    { content: "Wash dishes", completed: false },
+    { content: "Feed the cat", completed: true },
+  ];
+
+  const isUndone = ({ completed }) => !completed;
+
+  const tasksUndone = tasks.filter(isUndone);
+
+  console.log(tasksUndone); // [ { content: 'Wash dishes', completed: false } ]
+}
