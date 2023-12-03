@@ -1,6 +1,6 @@
 
 - destructuring
-- mergring arrays
+- mergring arrays - spread operator
 - cloning/copy arrays
 - passing array elements as a function argument
 - undefined number of function arguments

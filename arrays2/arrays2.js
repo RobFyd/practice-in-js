@@ -12,7 +12,7 @@
   `;
 }
 
-// mergring arrays
+// mergring arrays - spread operator/syntax
 
 {
   const numbers1 = [11, 22, 33];
@@ -29,6 +29,13 @@
   document.querySelector(".js-merging").innerText = `
         Show numbers from both arrays and extra number: ${allNumbers.join(", ")}
     `;
+
+  const array1 = [2, 5];
+  const array2 = [3, 7];
+
+  const mergeArrays = [...array1, ...array2];
+
+  console.log(mergeArrays); // [ 2, 5, 3, 7 ]
 }
 
 // cloning/copy arrays
@@ -318,7 +325,7 @@ console.log(firstPurpleFruitIndex); // 2
   const workers = [
     { name: "John", surname: "Conoly", salary: 2000 },
     { name: "Mike", surname: "Nabu", salary: 3000 },
-    { name: "Kate", surname:"Loboi", salary: 2500 },
+    { name: "Kate", surname: "Loboi", salary: 2500 },
   ];
 
   workers.sort((a, b) => a.salary - b.salary);
