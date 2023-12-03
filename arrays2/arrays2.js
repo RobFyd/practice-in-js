@@ -281,9 +281,97 @@ console.log(firstPurpleFruitIndex); // 2
 // sorting arrays - usually not used
 
 {
-  const strings = ["B", "b", 10, 2]
+  const strings = ["B", "b", 10, 2];
 
   strings.sort();
 
   console.log(strings); // [ 10, 2, 'B', 'b' ]
+}
+
+// sorting numbers
+
+{
+  const numbers = [40, 8, 1, 0];
+
+  numbers.sort((a, b) => a - b); // sort() - sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+  console.log(numbers);
+
+  numbers.sort((a, b) => b - a);
+  console.log(numbers);
+}
+
+// sorting strings
+
+{
+  const names = ["Kate", "John", "Mike", "Denise"];
+
+  names.sort((a, b) => a.localeCompare(b));
+  console.log(names);
+
+  names.sort((a, b) => b.localeCompare(a));
+  console.log(names);
+}
+
+// sorting objects
+
+{
+  const workers = [
+    { name: "John", surname: "Conoly", salary: 2000 },
+    { name: "Mike", surname: "Nabu", salary: 3000 },
+    { name: "Kate", surname:"Loboi", salary: 2500 },
+  ];
+
+  workers.sort((a, b) => a.salary - b.salary);
+  console.log(workers);
+
+  workers.sort((a, b) => b.salary - a.salary);
+  console.log(workers);
+
+  const getFullName = ({ name, surname }) => `${name} ${surname}`;
+
+  workers.sort((a, b) => getFullName(a).localeCompare(getFullName(b)));
+
+  console.log(workers);
+}
+
+// reverse
+
+{
+  const numbers = [1, 2, 3];
+
+  numbers.reverse(); // reverse() - reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+  console.log(numbers); // [ 3, 2, 1 ]
+}
+
+// reduce
+
+{
+  const numbers = [1, 2, 3, 4, 5];
+
+  const sum = numbers.reduce((acc, number) => acc + number, 0); // reduce() - executes a reducer function (that you provide) on each element of the array, resulting in single output value.
+  console.log(sum); // 15
+
+  const strings = ["a", "b", "c", "d"];
+
+  const result = strings.reduce((acc, string) => acc + string, "");
+  console.log(result); // abcd
+
+  const workers = [
+    { name: "John", salary: 2000 },
+    { name: "Mike", salary: 3000 },
+    { name: "Kate", salary: 2500 },
+  ];
+
+  const totalSalary = workers.reduce((acc, worker) => acc + worker.salary, 0);
+
+  console.log(totalSalary); // 7500
+
+  const workersAsHtml = workers.reduce(
+    (acc, worker) => acc + `<li>${worker.name}</li>`,
+    ""
+  );
+
+  console.log(workersAsHtml);
+
+  document.querySelector(".js-workersList2").innerHTML = workersAsHtml;
 }

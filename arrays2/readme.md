@@ -12,3 +12,7 @@
 - some, every
 - filter
 - map
+- sort
+- sorting numbers, strings, objects
+- reverse
+- reduce
