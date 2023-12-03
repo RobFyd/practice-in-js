@@ -277,3 +277,13 @@ console.log(firstPurpleFruitIndex); // 2
   document.querySelector(".js-workersList").innerHTML =
     workersAsListItems.join("");
 }
+
+// sorting arrays - usually not used
+
+{
+  const strings = ["B", "b", 10, 2]
+
+  strings.sort();
+
+  console.log(strings); // [ 10, 2, 'B', 'b' ]
+}
