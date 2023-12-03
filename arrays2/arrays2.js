@@ -185,11 +185,19 @@ console.log(firstPurpleFruitIndex); // 2
 
   console.log(isAnyTaskDone); // true
 
-  const numbers = [1, 3, 5, 7];
+  const isEveryTaskDone = tasks.every(({ completed }) => completed);
+
+  console.log(isEveryTaskDone); // false
+
+  const numbers = [1, 3, 5, 8];
 
   const isEven = (number) => number % 2 === 0;
 
   const isAnyNumberEven = numbers.some(isEven);
 
-  console.log(isAnyNumberEven); // false
+  console.log(isAnyNumberEven); // true
+
+  const isEveryNumberEven = numbers.every(isEven);
+
+  console.log(isEveryNumberEven); // false
 }
