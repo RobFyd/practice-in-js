@@ -1,4 +1,4 @@
-// destructuring
+// destructuring, rest parameter - [...rest]
 
 {
   const numbers = [10, 22, 33, 44];
@@ -32,10 +32,12 @@
 }
 
 {
+  // practise1
+
   const array1 = [2, 5];
   const array2 = [3, 7];
 
-  const mergeArrays = [...array1, ...array2];
+  const mergeArrays = (array1, array2) => [...array1, ...array2];
 
   console.log("practise1", mergeArrays); // practise1 [ 2, 5, 3, 7 ]
 }
