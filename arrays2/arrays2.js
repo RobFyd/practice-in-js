@@ -382,30 +382,3 @@ console.log(firstPurpleFruitIndex); // 2
 
   document.querySelector(".js-workersList2").innerHTML = workersAsHtml;
 }
-
-
-// find
-
-{
-  const numbers = [-6, 0, 20, -62, 85];
-
-  const firstPositiveNumber = numbers.find((number) => number > 0); 
-
-  console.log(firstPositiveNumber);
-
-  const firstgreaterThanTen = numbers.find((number) => number > 10);
-
-  console.log(firstgreaterThanTen);
-
-  const firstEvenNumber = numbers.find((number) => number % 2 === 0);
-
-  console.log(firstEvenNumber);
-
-  const firstOddNumber = numbers.find((number) => number % 2 !== 0);
-
-  console.log(firstOddNumber);
-
-  const firstSmallerThanZero = numbers.find((number) => number < 0);
-
-  console.log(firstSmallerThanZero);
-}
