@@ -12,7 +12,7 @@
   `;
 }
 
-// mergring arrays - spread operator/syntax
+// mergring arrays - spread operator/syntax [...x]
 
 {
   const numbers1 = [11, 22, 33];
@@ -29,13 +29,15 @@
   document.querySelector(".js-merging").innerText = `
         Show numbers from both arrays and extra number: ${allNumbers.join(", ")}
     `;
+}
 
+{
   const array1 = [2, 5];
   const array2 = [3, 7];
 
   const mergeArrays = [...array1, ...array2];
 
-  console.log(mergeArrays); // [ 2, 5, 3, 7 ]
+  console.log("practise1", mergeArrays); // practise1 [ 2, 5, 3, 7 ]
 }
 
 // cloning/copy arrays
