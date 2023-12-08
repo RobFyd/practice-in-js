@@ -147,6 +147,17 @@
   console.log(indexOfZ);
 }
 
+{
+  // practise4
+
+  indexOf = (element, arr) => arr.indexOf(element);
+
+  const arr = ["rum", "coffe", "tea"];
+  const element = "coffe";
+
+  console.log("practise4", indexOf(element, arr)); // 1
+}
+
 // find
 
 {
