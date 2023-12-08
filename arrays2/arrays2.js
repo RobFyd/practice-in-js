@@ -184,6 +184,19 @@
   console.log(firstSmallerThanZero); // -7
 }
 
+{
+  // practise5
+
+  const findNonEmptyTask = (tasks) => tasks.find(({ content }) => content);
+
+  const tasks = [
+    { content: "" },
+    { content: "Feed the cat" },
+  ];
+
+  console.log("practise5", findNonEmptyTask(tasks)); // { content: 'Feed the cat' }
+}
+
 // find object in array, findIndex
 
 const fruits = [
