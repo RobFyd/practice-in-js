@@ -12,6 +12,18 @@
   `;
 }
 
+{
+  // practise2
+
+ const exceptFirst = ([first, ...rest]) => rest;
+
+ const arr = [2, "delfin", null];
+
+  const result = exceptFirst(arr);
+
+  console.log("practise2", result); // [ 'delfin', null ]
+}
+
 // mergring arrays - spread operator/syntax [...x]
 
 {
@@ -34,12 +46,13 @@
 {
   // practise1
 
-  const array1 = [2, 5];
-  const array2 = [3, 7];
+  const mergeArrays = (arr1, arr2) => [...arr1, ...arr2];
 
-  const mergeArrays = (array1, array2) => [...array1, ...array2];
+  const arr1 = [2, 5];
+  const arr2 = [3, 7];
+  const result = mergeArrays(arr1, arr2);
 
-  console.log("practise1", mergeArrays); // practise1 [ 2, 5, 3, 7 ]
+  console.log("practise1", result); // [ 2, 5, 3, 7 ]
 }
 
 // cloning/copy arrays
