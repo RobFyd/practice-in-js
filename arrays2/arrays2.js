@@ -114,6 +114,18 @@
   console.log(allButWithoutLast);
 }
 
+{
+  // practise3
+
+  const last2Params = (arr) => arr.slice(-2);
+
+  const arr = [1, 3, undefined, true];
+
+  const result = last2Params(arr);
+
+  console.log("practise3", result); // [ undefined, true ]
+}
+
 // indexOf() and lastIndexOf() find element in array
 
 {
