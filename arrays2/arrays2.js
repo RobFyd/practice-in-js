@@ -223,6 +223,16 @@ const firstPurpleFruitIndex = fruits.findIndex(
 
 console.log(firstPurpleFruitIndex); // 2
 
+{
+  // practise6
+
+  const oddIndex = (arr) => arr.findIndex((el) => el % 2 !== 0);
+
+  const arr = [2, 4, 7, 8];
+
+  console.log("practise6", oddIndex(arr)); // 2
+}
+
 // includes
 
 {
