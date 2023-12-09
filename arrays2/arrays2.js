@@ -15,9 +15,9 @@
 {
   // practise2
 
- const exceptFirst = ([first, ...rest]) => rest;
+  const exceptFirst = ([first, ...rest]) => rest;
 
- const arr = [2, "delfin", null];
+  const arr = [2, "delfin", null];
 
   const result = exceptFirst(arr);
 
@@ -189,10 +189,7 @@
 
   const findNonEmptyTask = (tasks) => tasks.find(({ content }) => content);
 
-  const tasks = [
-    { content: "" },
-    { content: "Feed the cat" },
-  ];
+  const tasks = [{ content: "" }, { content: "Feed the cat" }];
 
   console.log("practise5", findNonEmptyTask(tasks)); // { content: 'Feed the cat' }
 }
@@ -226,11 +223,11 @@ console.log(firstPurpleFruitIndex); // 2
 {
   // practise6
 
-  const oddIndex = (arr) => arr.findIndex((el) => el % 2 !== 0);
+  const oddIndex = (numbers) => numbers.findIndex((el) => el % 2 !== 0);
 
-  const arr = [2, 4, 7, 8];
+  const numbers = [2, 4, 7, 8];
 
-  console.log("practise6", oddIndex(arr)); // 2
+  console.log("practise6", oddIndex(numbers)); // 2
 }
 
 // includes
@@ -280,6 +277,19 @@ console.log(firstPurpleFruitIndex); // 2
   const isEveryNumberEven = numbers.every(isEven);
 
   console.log(isEveryNumberEven); // false
+}
+
+{
+  // practise8
+
+  const someAdult = (people) => people.some(({ age }) => age >= 18);
+
+  const people = [
+    { name: "Melodia", age: 15 },
+    { name: "Kosmo", age: 19 },
+  ];
+
+  console.log("practise8", someAdult(people)); // true
 }
 
 // filter
