@@ -427,6 +427,19 @@ console.log(firstPurpleFruitIndex); // 2
   console.log(numbers);
 }
 
+{
+  // practise12
+
+  const sortPeople = (people) => people.sort((a, b) => a.age - b.age);
+
+  const people = [
+    { name: "Chris", age: 30 },
+    { name: "Zdzich", age: 20 },
+  ];
+  
+  console.log("practise12", sortPeople(people)); // [ { name: 'Zdzich', age: 20 }, { name: 'Chris', age: 30 } ]
+}
+
 // sorting strings
 
 {
