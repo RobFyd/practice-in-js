@@ -292,6 +292,17 @@ console.log(firstPurpleFruitIndex); // 2
   console.log("practise8", someAdult(people)); // true
 }
 
+{
+  // practise9
+
+  const onlyString = (arr) =>
+    arr.every(({ element }) => typeof element === "string");
+
+  const arr = [{ element: "" }, { element: "iron" }];
+
+  console.log("practise9", onlyString(arr)); // true
+}
+
 // filter
 
 {
@@ -319,6 +330,19 @@ console.log(firstPurpleFruitIndex); // 2
   const tasksUndone = tasks.filter(isUndone);
 
   console.log(tasksUndone); // [ { content: 'Wash dishes', completed: false } ]
+}
+
+{
+  // practise10
+
+  const filterPremium = (carBrands) => {
+    const premiumBrands = ["Audi", "BMW", "Mercedes"];
+
+    return carBrands.filter((brand) => premiumBrands.includes(brand));
+  };
+
+  const carBrands = ["Peugeot", "Audi", "BMW"];
+  console.log("practise10", filterPremium(carBrands)); // [ 'Audi', 'BMW' ]
 }
 
 // map
@@ -367,6 +391,8 @@ console.log(firstPurpleFruitIndex); // 2
   document.querySelector(".js-workersList").innerHTML =
     workersAsListItems.join("");
 }
+
+
 
 // sorting arrays - usually not used
 
