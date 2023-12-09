@@ -243,6 +243,16 @@ console.log(firstPurpleFruitIndex); // 2
   console.log(isKateComing); // true
 }
 
+{
+  // practise7
+
+  const hasStrawberry = (fruits) => fruits.includes("strawberry");
+
+  const fruits = ["banana", "marakuja"];
+
+  console.log("practise7", hasStrawberry(fruits)); // false
+}
+
 // some, every
 
 {
