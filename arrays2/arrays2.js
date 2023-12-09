@@ -392,7 +392,18 @@ console.log(firstPurpleFruitIndex); // 2
     workersAsListItems.join("");
 }
 
+{
+  // practise11
 
+  const getColors = (cars) => cars.map(({ color }) => color);
+
+  const cars = [
+    {car: "BMW X5", color: "black"},
+    {car: "Peaugot 3008", color: "white"},
+  ]
+
+  console.log("practise11", getColors(cars)); // [ 'black', 'white' ]
+}
 
 // sorting arrays - usually not used
 
