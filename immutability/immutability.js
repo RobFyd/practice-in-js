@@ -64,3 +64,20 @@ const removedIndexx = 1;
 const tasksWithRemovedSecondItemm = tasks3.filter(
   (task3, index) => index !== removedIndexx
 );
+
+// updating properties in an array - slice
+
+const tasks4 = [
+  { tittle: "Buy milk", completed: false },
+  { tittle: "Buy bread", completed: true },
+  { tittle: "Buy eggs", completed: false },
+];
+
+const editIndex = 1;
+
+const tasksWithUpdatedItem = [
+  ...tasks2.slice(0, editIndex),
+  { ...tasks2[editIndex], completed: false },
+  ...tasks2.slice(editIndex + 1),
+];
+
