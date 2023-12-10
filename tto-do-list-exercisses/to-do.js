@@ -14,6 +14,8 @@ console.log("test");
     },
   ];
 
+  let hideDoneTasks = false; // zmienna globalna pod nowe przyciski
+
   const addNewTask = (newTaskContent) => {
     tasks.push({
       content: newTaskContent,
@@ -76,7 +78,7 @@ console.log("test");
     `;
   };
 
-  const render = () => {
+  const renderTasks = () => {
     let tasksListHTMLcontent = "";
 
     for (const task of tasks) {
@@ -111,7 +113,14 @@ console.log("test");
       tasks.filter((task) => task.important).length
     }\n
     `;
+  };
 
+  const render = () => {
+    renderTasks();
+    renderButtons();
+
+
+    // bindButtonsEvents();  eventListener na przyciskach, bedzie potrzebny if
     bindToggleHighLightEvents();
     bindToggleDoneEvents();
     bindRemoveEvents();
@@ -133,7 +142,6 @@ console.log("test");
   };
 
   const init = () => {
-    renderButtons();
     render();
 
     const form = document.querySelector(".js-form");
