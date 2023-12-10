@@ -81,3 +81,16 @@ const tasksWithUpdatedItem = [
   ...tasks2.slice(editIndex + 1),
 ];
 
+// updating properties in an array - map
+
+const tasks5 = [
+  { tittle: "Buy milk", completed: false },
+  { tittle: "Buy bread", completed: true },
+  { tittle: "Buy eggs", completed: false },
+];
+
+const editIndexx = 1;
+
+const tasksWithUpdatedItemm = tasks5.map((task5, index) =>
+  index === editIndexx ? { ...task5, completed: false } : task5
+);
