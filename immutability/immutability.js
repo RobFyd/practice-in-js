@@ -26,3 +26,16 @@ const person2 = {
 };
 
 const { age, ...personWithoutAge } = person2;
+
+// adding properties to an array
+
+const tasks = [
+    { tittle: "Buy milk", completed: false },
+    { tittle: "Buy bread", completed: true },
+];
+
+const tasksWithNewItem = [
+    ...tasks,
+    { tittle: "Buy eggs", completed: false },
+];
+
