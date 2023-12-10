@@ -27,7 +27,7 @@ const person2 = {
 
 const { age, ...personWithoutAge } = person2;
 
-// adding properties to an array
+// adding properties to an array - spread operator
 
 const tasks = [
     { tittle: "Buy milk", completed: false },
@@ -39,3 +39,17 @@ const tasksWithNewItem = [
     { tittle: "Buy eggs", completed: false },
 ];
 
+// removing properties from an array - slice
+
+const tasks2 = [
+    { tittle: "Buy milk", completed: false },
+    { tittle: "Buy bread", completed: true },
+    { tittle: "Buy eggs", completed: false },
+];
+
+const removedIndex = 1;
+
+const tasksWithRemovedSecondItem = [
+  ...tasks2.slice(0, removedIndex),
+  ...tasks2.slice(removedIndex + 1),
+];
