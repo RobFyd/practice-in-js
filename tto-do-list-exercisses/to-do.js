@@ -1,7 +1,7 @@
 console.log("test");
 
 {
-  const tasks = [
+  let tasks = [
     {
       content: "example task 1",
       done: false,
@@ -17,9 +17,8 @@ console.log("test");
   let hideDoneTasks = false; // zmienna globalna pod nowe przyciski
 
   const addNewTask = (newTaskContent) => {
-    tasks.push({
-      content: newTaskContent,
-    });
+    tasks = [...tasks, { content: newTaskContent }];
+
     render();
   };
 
@@ -120,7 +119,7 @@ console.log("test");
     renderButtons();
 
 
-    // bindButtonsEvents();  eventListener na przyciskach, bedzie potrzebny if
+    // bindButtonsEvents = () => {};  eventListener na przyciskach, bedzie potrzebny if
     bindToggleHighLightEvents();
     bindToggleDoneEvents();
     bindRemoveEvents();
