@@ -27,12 +27,20 @@ console.log("test");
   };
 
   const toggleTaskDone = (taskIndex) => {
-    tasks[taskIndex].done = !tasks[taskIndex].done;
+    tasks = [
+      ...tasks.slice(0, taskIndex),
+      { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+      ...tasks.slice(taskIndex + 1),
+    ];
     render();
   };
 
   const toggleTaskHighLight = (taskIndex) => {
-    tasks[taskIndex].important = !tasks[taskIndex].important;
+    tasks = [
+      ...tasks.slice(0, taskIndex),
+      { ...tasks[taskIndex], important: !tasks[taskIndex].important },
+      ...tasks.slice(taskIndex + 1),
+    ];
     render();
   };
 
