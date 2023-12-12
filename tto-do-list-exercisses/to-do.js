@@ -44,7 +44,13 @@ console.log("test");
     render();
   };
 
-  const bindRemoveEvents = () => {
+  // const toggleAllTasksDone = () => {};
+
+  // const toggleHiddenTasksDone = () => {};
+
+  // const bindRemoveEvents = () => {};
+
+  const bindButtonsEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
@@ -72,6 +78,8 @@ console.log("test");
         toggleTaskHighLight(index);
       });
     });
+
+    // if (!tasks.length) {
   };
 
   const renderButtons = () => {
@@ -125,10 +133,10 @@ console.log("test");
     renderTasks();
     renderButtons();
 
-    // bindButtonsEvents = () => {};  eventListener na przyciskach, bedzie potrzebny if
+    // bindRemoveEvents = () => {};  eventListener na przyciskach, bedzie potrzebny if
     bindToggleHighLightEvents();
     bindToggleDoneEvents();
-    bindRemoveEvents();
+    bindButtonsEvents();
   };
 
   const onFormSubmit = (event) => {
