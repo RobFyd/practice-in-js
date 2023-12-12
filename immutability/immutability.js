@@ -36,7 +36,7 @@ const tasks = [
 
 const tasksWithNewItem = [...tasks, { tittle: "Buy eggs", completed: false }];
 
-// removing properties from an array - slice
+// removing properties from an array - slice method
 
 const tasks2 = [
   { tittle: "Buy milk", completed: false },
@@ -44,14 +44,14 @@ const tasks2 = [
   { tittle: "Buy eggs", completed: false },
 ];
 
-const removedIndex = 1;
+const removedIndex = 0;
 
 const tasksWithRemovedSecondItem = [
   ...tasks2.slice(0, removedIndex),
   ...tasks2.slice(removedIndex + 1),
 ];
 
-// removing properties from an array - filter
+// removing properties from an array - filter method
 
 const tasks3 = [
   { tittle: "Buy milk", completed: false },
@@ -65,20 +65,25 @@ const tasksWithRemovedSecondItemm = tasks3.filter(
   (task3, index) => index !== removedIndexx
 );
 
-// updating properties in an array - slice
+// updating properties in an array - slice method
 
 const tasks4 = [
   { tittle: "Buy milk", completed: false },
+  { tittle: "Buy grain", completed: true },
   { tittle: "Buy bread", completed: true },
   { tittle: "Buy eggs", completed: false },
+  { tittle: "Buy butter", completed: false },
+  { tittle: "Buy cheese", completed: true },
 ];
 
 const editIndex = 1;
+const editIndex2 = 2;
 
 const tasksWithUpdatedItem = [
-  ...tasks2.slice(0, editIndex),
-  { ...tasks2[editIndex], completed: false },
-  ...tasks2.slice(editIndex + 1),
+  ...tasks4.slice(0, editIndex),
+  { ...tasks4[editIndex], tittle: "coconut", completed: false },
+  { ...tasks4[editIndex2], tittle: "banana", completed: false },
+  ...tasks4.slice(editIndex2 + 1),
 ];
 
 // updating properties in an array - map
