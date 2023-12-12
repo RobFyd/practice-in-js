@@ -44,9 +44,12 @@ console.log("test");
     render();
   };
 
-  // const toggleAllTasksDone = () => {};
+  const toggleHiddenTasksDone = () => {
+    hiddenDoneTasks = !hiddenDoneTasks;
+    render();
+  };
 
-  // const toggleHiddenTasksDone = () => {};
+  // const toggleAllTasksDone = () => {};
 
   // const bindRemoveEvents = () => {};
 
@@ -79,12 +82,17 @@ console.log("test");
       });
     });
 
+    const hiddenTasksButton = document.querySelector(".js-hideCompleted");
+    hiddenTasksButton.addEventListener("click", toggleHiddenTasksDone);
+
     // if (!tasks.length) {
   };
 
   const renderButtons = () => {
     document.querySelector(".js-buttons").innerHTML = `
-    <button class="button__hideCompleted js-hideCompleted">Hide completed</button>
+    <button class="button__hideCompleted js-hideCompleted">${
+      hiddenDoneTasks ? "Show" : "Hide"
+    } completed</button>
 
     <button class="button__completeAll js-completeAll ${
       tasks.every(({ done }) => done) ? "disabled" : ""
