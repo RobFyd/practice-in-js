@@ -55,7 +55,7 @@ console.log("test");
   };
 
   const bindRemoveEvents = () => {
-    if (tasks.length) {
+    if (!tasks.length) {
       return;
     }
 
@@ -98,16 +98,6 @@ console.log("test");
     hiddenTasksButton.addEventListener("click", toggleHiddenTasksDone);
   };
 
-  const bindToggleDoneEvents = () => {
-    const toggleDoneButtons = document.querySelectorAll(".js-done");
-
-    toggleDoneButtons.forEach((toggleDoneButton, index) => {
-      toggleDoneButton.addEventListener("click", () => {
-        toggleTaskDone(index);
-      });
-    });
-  };
-
   const bindToggleHighLightEvents = () => {
     const toggleHighLightButtons = document.querySelectorAll(".js-highLight");
 
@@ -119,6 +109,10 @@ console.log("test");
   };
 
   const renderButtons = () => {
+    if (!tasks.length) {
+      document.querySelector(".js-buttons").innerHTML = "";
+      return;
+    }
     document.querySelector(".js-buttons").innerHTML = `
     <button class="button__hideCompleted js-hideCompleted">${
       hideDoneTasks ? "Show" : "Hide"
@@ -173,7 +167,6 @@ console.log("test");
 
     bindRemoveEvents();
     bindToggleHighLightEvents();
-    bindToggleDoneEvents();
     bindButtonsEvents();
   };
 
@@ -211,4 +204,3 @@ console.log("test");
 
   button.addEventListener("click", showThumbUp);
 }
-//hideDoneTasks
