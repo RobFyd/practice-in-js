@@ -105,15 +105,15 @@ console.log("test");
 
     for (const task of tasks) {
       tasksListHTMLcontent += `
-        <li class="list__item${task.done ? " list__item--done" : ""}${
+        <li class="list__item ${task.done && hideDoneTasks ? "list__item--done" : ""}${
         task.important ? " list__item--highLight" : ""
       }">
 
-        <button class="task__highLight js-highLight${
+        <button class="task__highLight js-highLight ${
           task.important ? " task__highLight--active" : ""
         }">${task.important ? "💫" : "⭐"}</button>
         
-        <button class="task__done js-done${
+        <button class="task__done js-done ${
           task.done ? " task__done--active" : ""
         }">${task.done ? "✅" : "✔️"}</button>
       

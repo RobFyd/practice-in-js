@@ -52,6 +52,10 @@ body {
     padding: 5px;
 }
 
+.list__item--done {
+    display: none;
+}
+
 .task__highLight {
     border-radius: 2px;
     border: 1px solid black;
