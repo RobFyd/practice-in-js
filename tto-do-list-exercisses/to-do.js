@@ -75,6 +75,24 @@ console.log("test");
       });
     });
 
+    const toggleDoneButtons = document.querySelectorAll(".js-done");
+
+    toggleDoneButtons.forEach((toggleDoneButton, index) => {
+      toggleDoneButton.addEventListener("click", () => {
+        toggleTaskDone(index);
+      });
+    });
+
+    if (!tasks.length) {
+      return;
+    } else {
+      const removeTasksButton = document.querySelector(".js-completeAll");
+
+      removeTasksButton.addEventListener("click", () => {
+        toggleAllTasksDone();
+      });
+    }
+
     const hiddenTasksButton = document.querySelector(".js-hideCompleted");
 
     hiddenTasksButton.addEventListener("click", toggleHiddenTasksDone);
@@ -153,7 +171,7 @@ console.log("test");
     renderTasks();
     renderButtons();
 
-    // bindRemoveEvents = () => {};  eventListener na przyciskach, bedzie potrzebny if
+    bindRemoveEvents();
     bindToggleHighLightEvents();
     bindToggleDoneEvents();
     bindButtonsEvents();
