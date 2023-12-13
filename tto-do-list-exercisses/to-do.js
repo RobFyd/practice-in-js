@@ -14,7 +14,7 @@ console.log("test");
     },
   ];
 
-  let hideDoneTasks = false; // zmienna globalna pod nowe przyciski
+  let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
     tasks = [...tasks, { content: newTaskContent }];
@@ -45,7 +45,7 @@ console.log("test");
   };
 
   const toggleHiddenTasksDone = () => {
-    hiddenDoneTasks = !hiddenDoneTasks;
+    hideDoneTasks = !hideDoneTasks;
     render();
   };
 
@@ -91,7 +91,7 @@ console.log("test");
   const renderButtons = () => {
     document.querySelector(".js-buttons").innerHTML = `
     <button class="button__hideCompleted js-hideCompleted">${
-      hiddenDoneTasks ? "Show" : "Hide"
+      hideDoneTasks ? "Show" : "Hide"
     } completed</button>
 
     <button class="button__completeAll js-completeAll ${
@@ -181,3 +181,4 @@ console.log("test");
 
   button.addEventListener("click", showThumbUp);
 }
+//hideDoneTasks
