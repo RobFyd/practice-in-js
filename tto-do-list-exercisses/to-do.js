@@ -49,9 +49,22 @@ console.log("test");
     render();
   };
 
-  // const toggleAllTasksDone = () => {};
+  const toggleAllTasksDone = () => {
+    tasks = tasks.map((task) => ({ ...task, done: true }));
+    render();
+  };
 
-  // const bindRemoveEvents = () => {};
+  const bindRemoveEvents = () => {
+    if (tasks.length) {
+      return;
+    }
+
+    const removeTasksButton = document.querySelector(".js-completeAll");
+
+    removeTasksButton.addEventListener("click", () => {
+      toggleAllTasksDone();
+    });
+  };
 
   const bindButtonsEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
@@ -61,6 +74,10 @@ console.log("test");
         removeTask(index);
       });
     });
+
+    const hiddenTasksButton = document.querySelector(".js-hideCompleted");
+
+    hiddenTasksButton.addEventListener("click", toggleHiddenTasksDone);
   };
 
   const bindToggleDoneEvents = () => {
@@ -81,11 +98,6 @@ console.log("test");
         toggleTaskHighLight(index);
       });
     });
-
-    const hiddenTasksButton = document.querySelector(".js-hideCompleted");
-    hiddenTasksButton.addEventListener("click", toggleHiddenTasksDone);
-
-    // if (!tasks.length) {
   };
 
   const renderButtons = () => {
@@ -94,9 +106,9 @@ console.log("test");
       hideDoneTasks ? "Show" : "Hide"
     } completed</button>
 
-    <button class="button__completeAll js-completeAll ${
+    <button class="button__completeAll js-completeAll" ${
       tasks.every(({ done }) => done) ? "disabled" : ""
-    }">Complete all</button>
+    } >Complete all</button>
     `;
   };
 
@@ -105,9 +117,9 @@ console.log("test");
 
     for (const task of tasks) {
       tasksListHTMLcontent += `
-        <li class="list__item ${task.done && hideDoneTasks ? "list__item--done" : ""}${
-        task.important ? " list__item--highLight" : ""
-      }">
+        <li class="list__item ${
+          task.done && hideDoneTasks ? "list__item--done" : ""
+        }${task.important ? " list__item--highLight" : ""}">
 
         <button class="task__highLight js-highLight ${
           task.important ? " task__highLight--active" : ""
