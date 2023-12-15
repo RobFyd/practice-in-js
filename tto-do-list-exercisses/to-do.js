@@ -109,11 +109,14 @@ console.log("test");
   };
 
   const renderButtons = () => {
+    const buttonsElement = document.querySelector(".js-buttons");
+
     if (!tasks.length) {
-      document.querySelector(".js-buttons").innerHTML = "";
+      buttonsElement.innerHTML = "";
       return;
     }
-    document.querySelector(".js-buttons").innerHTML = `
+
+    buttonsElement.innerHTML = `
     <button class="button__hideCompleted js-hideCompleted">${
       hideDoneTasks ? "Show" : "Hide"
     } completed</button>
