@@ -54,18 +54,6 @@ console.log("test");
     render();
   };
 
-  const bindRemoveEvents = () => {
-    if (!tasks.length) {
-      return;
-    }
-
-    const removeTasksButton = document.querySelector(".js-completeAll");
-
-    removeTasksButton.addEventListener("click", () => {
-      toggleAllTasksDone();
-    });
-  };
-
   const bindButtonsEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -168,7 +156,6 @@ console.log("test");
     renderButtons();
     renderStats();
 
-    bindRemoveEvents();
     bindToggleHighLightEvents();
     bindButtonsEvents();
   };
