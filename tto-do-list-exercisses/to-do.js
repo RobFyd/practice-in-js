@@ -125,10 +125,7 @@ console.log("test");
   };
 
   const renderTasks = () => {
-    let tasksListHTMLcontent = "";
-
-    for (const task of tasks) {
-      tasksListHTMLcontent += `
+    const taskToHTML = (task) => `
         <li class="list__item ${
           task.done && hideDoneTasks ? "list__item--done" : ""
         }${task.important ? " list__item--highLight" : ""}">
@@ -142,16 +139,18 @@ console.log("test");
         }">${task.done ? "✅" : "✔️"}</button>
       
         <span class="task__content ${task.done ? "task__content--done" : ""}">${
-        task.content
-      }</span>
+      task.content
+    }</span>
 
         <button class="task__remove js-remove">❌</button>
         </li>
     `;
-    }
 
-    document.querySelector(".js-tasks").innerHTML = tasksListHTMLcontent;
+    const tasksElement = document.querySelector(".js-tasks");
+    tasksElement.innerHTML = tasks.map(taskToHTML).join("");
+  };
 
+  const renderStats = () => {
     document.querySelector(".js-stats").innerText = `
     Number of all tasks: ${tasks.length}\n
     Number of done tasks: ${tasks.filter((task) => task.done).length}\n
@@ -164,6 +163,7 @@ console.log("test");
   const render = () => {
     renderTasks();
     renderButtons();
+    renderStats();
 
     bindRemoveEvents();
     bindToggleHighLightEvents();
