@@ -6,6 +6,20 @@
     <title>ReactStart</title>
     <link rel="icon" href="../logo/RFLogo.png" />
     <meta property="og:image" content="" />
+    <script
+      defer
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link
       rel="stylesheet"
@@ -23,8 +37,11 @@
   </head>
 
   <body>
+    <div id="root"></div>
 
-
-
+    <script type="text/babel">
+      const exampleElement = <h1>Hello Rob!</h1>;
+      ReactDOM.render(exampleElement, document.getElementById("root"));
+    </script>
   </body>
 </html>
