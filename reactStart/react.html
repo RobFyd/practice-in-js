@@ -29,7 +29,7 @@
       referrerpolicy="no-referrer"
     />
     <link href="" rel="stylesheet" />
-    <script defer src="react.js"></script>
+    <script defer src=""></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredoka+One&family=Lato:wght@400;700&family=Pacifico&display=swap"
       rel="stylesheet"
@@ -56,7 +56,7 @@
       ReactDOM.render(exampleElement, document.getElementById("root"));
     </script>
 
-    ////////////////////////////////////////////
+    //////////////////////////////////////////// JSX
 
     <div id="root2"></div>
 
@@ -68,13 +68,13 @@
       ReactDOM.render(element, document.getElementById("root2"));
     </script>
 
-    ////////////////////////////////////////////
+    //////////////////////////////////////////// conditional rendering
 
     <div id="root3"></div>
 
     <script type="text/babel">
-      const Hello = ({ name }) => {
-        //component => function that returns a react element
+      const Hello = ({ name }) => {     //component => function that returns a react element
+        
         if (name) {
           return <h1>Hello {name}!</h1>;
         }
@@ -91,7 +91,7 @@
       ReactDOM.render(element2, document.getElementById("root3"));
     </script>
 
-    ////////////////////////////////////////////
+    //////////////////////////////////////////// ternary operator
 
     <div id="root4"></div>
 
@@ -109,7 +109,7 @@
       ReactDOM.render(element3, document.getElementById("root4"));
     </script>
 
-    ////////////////////////////////////////////
+    //////////////////////////////////////////// "or" operator
 
     <div id="root5"></div>
 
@@ -127,7 +127,7 @@
       ReactDOM.render(element4, document.getElementById("root5"));
     </script>
 
-    ////////////////////////////////////////////
+    //////////////////////////////////////////// "and" operator
 
     <div id="root6"></div>
 
@@ -144,6 +144,32 @@
       );
 
       ReactDOM.render(element5, document.getElementById("root6"));
+    </script>
+
+    //////////////////////////////////////////// Array in react
+
+    <div id="root7"></div>
+
+    <script type="text/babel">
+
+      const ProductsList = (props) => (
+        <ul>
+          {props.products.map(product => (
+            <li key={product}>{product}</li>
+          ))}
+          </ul>
+      );
+
+      const element6 = (
+        <div>
+          <h1>Products:</h1>
+          <ProductsList 
+          products={["ball", "pen", "lolipop"]} 
+          />
+        </div>
+      );
+
+      ReactDOM.render(element6, document.getElementById("root7"));
     </script>
   </body>
 </html>
