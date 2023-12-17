@@ -152,9 +152,9 @@
 
     <script type="text/babel">
 
-      const ProductsList = (props) => (
+      const ProductsList = ({ products }) => (
         <ul>
-          {props.products.map(product => (
+          {products.map(product => (      //map method returns a new array
             <li key={product}>{product}</li>
           ))}
           </ul>
@@ -170,6 +170,38 @@
       );
 
       ReactDOM.render(element6, document.getElementById("root7"));
+    </script>
+
+    //////////////////////////////////////////// objects array in react
+
+    <div id="root8"></div>
+
+    <script type="text/babel">
+
+      const ProductsList2 = ({ products }) => (
+        <ul>
+          {products.map(product => (      //map method returns a new array
+            <li key={product.id}>{product.name}</li>
+          ))}
+          </ul>
+      );
+
+          const products = [
+            { id: 1, name: "plate" },
+            { id: 2, name: "towel" },
+            { id: 3, name: "fork" },
+          ];
+
+      const element7 = (
+        <div>
+          <h1>Products2:</h1>
+          <ProductsList2 
+          products={products} 
+          />
+        </div>
+      );
+
+      ReactDOM.render(element7, document.getElementById("root8"));
     </script>
   </body>
 </html>
