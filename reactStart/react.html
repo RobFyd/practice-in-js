@@ -61,9 +61,9 @@
     <div id="root2"></div>
 
     <script type="text/babel">
-      const Propsy = () => <h1>Yo {name}</h1> //props => properties
+      const Propsy = () => <h1>Yo {name}</h1>; //props => properties
 
-      const element = <Propsy name="Rob" />
+      const element = <Propsy name="Rob" />;
 
       ReactDOM.render(element, document.getElementById("root2"));
     </script>
@@ -73,8 +73,9 @@
     <div id="root3"></div>
 
     <script type="text/babel">
-      const Hello = ({ name }) => {     //component => function that returns a react element
-        
+      const Hello = ({ name }) => {
+        //component => function that returns a react element
+
         if (name) {
           return <h1>Hello {name}!</h1>;
         }
@@ -96,8 +97,10 @@
     <div id="root4"></div>
 
     <script type="text/babel">
-      const Hi = ({ name }) =>  (                   //component => function that returns a react element
-         <h1>Hi {name ? name : "Stranger"}!</h1>    //ternary operator
+      const Hi = (
+        { name } //component => function that returns a react element
+      ) => (
+        <h1>Hi {name ? name : "Stranger"}!</h1> //ternary operator
       );
 
       const element3 = (
@@ -114,8 +117,10 @@
     <div id="root5"></div>
 
     <script type="text/babel">
-      const Ola = ({ name }) =>  (                   //component => function that returns a react element
-         <h1>Ola {name || "Stranger"}!</h1>    //"or" operator returns what is on the left if it is truthy
+      const Ola = (
+        { name } //component => function that returns a react element
+      ) => (
+        <h1>Ola {name || "Stranger"}!</h1> //"or" operator returns what is on the left if it is truthy
       );
 
       const element4 = (
@@ -132,9 +137,9 @@
     <div id="root6"></div>
 
     <script type="text/babel">
-      const Aligato = ({ name }) =>  {                   //component => function that returns a react element
-         return !!name &&
-      <h1>Aligato {name}!</h1>    //"and" operator returns what is on the right if it is truthy
+      const Aligato = ({ name }) => {
+        //component => function that returns a react element
+        return !!name && <h1>Aligato {name}!</h1>; //"and" operator returns what is on the right if it is truthy
       };
 
       const element5 = (
@@ -151,21 +156,24 @@
     <div id="root7"></div>
 
     <script type="text/babel">
-
       const ProductsList = ({ products }) => (
-        <ul>
-          {products.map(product => (      //map method returns a new array
-            <li key={product}>{product}</li>
-          ))}
+        <div>
+          <h1>Products:</h1>
+          <ul>
+            {products.map(
+              (
+                product //map method returns a new array
+              ) => (
+                <li key={product}>{product}</li>
+              )
+            )}
           </ul>
+        </div>
       );
 
       const element6 = (
         <div>
-          <h1>Products:</h1>
-          <ProductsList 
-          products={["ball", "pen", "lolipop"]} 
-          />
+          <ProductsList products={["ball", "pen", "lolipop"]} />
         </div>
       );
 
@@ -177,27 +185,30 @@
     <div id="root8"></div>
 
     <script type="text/babel">
-
       const ProductsList2 = ({ products }) => (
-        <ul>
-          {products.map(({ id, name }) => (      //map method returns a new array
-            <li key={id}>{name}</li>
-          ))}
+        <React.Fragment>
+          <h1>Products2:</h1>
+          <ul>
+            {products.map(
+              (
+                { id, name } //map method returns a new array
+              ) => (
+                <li key={id}>{name}</li>
+              )
+            )}
           </ul>
+        </React.Fragment>
       );
 
-          const products = [
-            { id: 1, name: "plate" },
-            { id: 2, name: "towel" },
-            { id: 3, name: "fork" },
-          ];
+      const products = [
+        { id: 1, name: "plate" }, //unique key is needed for each element "id"
+        { id: 2, name: "towel" },
+        { id: 3, name: "fork" },
+      ];
 
       const element7 = (
         <div>
-          <h1>Products2:</h1>
-          <ProductsList2 
-          products={products} 
-          />
+          <ProductsList2 products={products} />
         </div>
       );
 
