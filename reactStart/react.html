@@ -61,9 +61,9 @@
     <div id="root2"></div>
 
     <script type="text/babel">
-      const Propsy = () => <h1>Yo {name}</h1>; //props => properties
+      const Propsy = () => <h1>Yo {name}</h1> //props => properties
 
-      const element = <Propsy name="Rob" />;
+      const element = <Propsy name="Rob" />
 
       ReactDOM.render(element, document.getElementById("root2"));
     </script>
@@ -84,7 +84,7 @@
 
       const element2 = (
         <div>
-          <Hello name="" />;
+          <Hello name="" />
         </div>
       );
 
@@ -96,17 +96,35 @@
     <div id="root4"></div>
 
     <script type="text/babel">
-      const Hi = (              //component => function that returns a react element
-        { name } 
-      ) => <h1>Hi {name ? name : "Stranger"}!</h1>;     //ternary operator
+      const Hi = ({ name }) =>  (                   //component => function that returns a react element
+         <h1>Hi {name ? name : "Stranger"}!</h1>    //ternary operator
+      );
 
       const element3 = (
         <div>
-          <Hi name="Andrew" />;
+          <Hi name="Andrew" />
         </div>
       );
 
       ReactDOM.render(element3, document.getElementById("root4"));
+    </script>
+
+    ////////////////////////////////////////////
+
+    <div id="root5"></div>
+
+    <script type="text/babel">
+      const Ola = ({ name }) =>  (                   //component => function that returns a react element
+         <h1>Ola {name || "Stranger"}!</h1>    //"or" operator returns what is on the left if it is truthy
+      );
+
+      const element4 = (
+        <div>
+          <Ola name="" />
+        </div>
+      );
+
+      ReactDOM.render(element4, document.getElementById("root5"));
     </script>
   </body>
 </html>
