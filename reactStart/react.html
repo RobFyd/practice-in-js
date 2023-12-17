@@ -126,5 +126,24 @@
 
       ReactDOM.render(element4, document.getElementById("root5"));
     </script>
+
+    ////////////////////////////////////////////
+
+    <div id="root6"></div>
+
+    <script type="text/babel">
+      const Aligato = ({ name }) =>  {                   //component => function that returns a react element
+         return !!name &&
+      <h1>Aligato {name}!</h1>    //"and" operator returns what is on the right if it is truthy
+      };
+
+      const element5 = (
+        <div>
+          <Aligato name="Bob" />
+        </div>
+      );
+
+      ReactDOM.render(element5, document.getElementById("root6"));
+    </script>
   </body>
 </html>
