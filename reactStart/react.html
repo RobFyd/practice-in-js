@@ -40,8 +40,47 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      const exampleElement = <h1>Hello Rob!</h1>;
+      const name = "Rob";
+      const buttonAtributes = {
+        disabled: true,
+        className: "someClass",
+      };
+
+      const exampleElement = (
+        <div>
+          <h1 className="header">Hello {name.toUpperCase()}!</h1>
+          <button {...buttonAtributes}>Click Me</button>
+        </div>
+      );
+
       ReactDOM.render(exampleElement, document.getElementById("root"));
+    </script>
+
+
+    <div id="root2"></div>
+
+    <script type="text/babel">
+      const Propsy = () => <h1>Yo {name}</h1>;
+
+      const element = <Propsy name="Rob" />;
+
+      ReactDOM.render(element, document.getElementById("root2"));
+    </script>
+
+
+    <div id="root3"></div>
+
+    <script type="text/babel">
+      const Hello = (props) => {
+        if (props.name) {
+          return <h1>Hi {props.name}!</h1>;
+        }
+
+        return <h1>Hi Stranger!</h1>;
+      };
+
+      const element2 = <Hello name="Rob" />;
+      ReactDOM.render(element2, document.getElementById("root3"));
     </script>
   </body>
 </html>
