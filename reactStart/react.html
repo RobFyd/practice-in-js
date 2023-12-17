@@ -180,8 +180,8 @@
 
       const ProductsList2 = ({ products }) => (
         <ul>
-          {products.map(product => (      //map method returns a new array
-            <li key={product.id}>{product.name}</li>
+          {products.map(({ id, name }) => (      //map method returns a new array
+            <li key={id}>{name}</li>
           ))}
           </ul>
       );
