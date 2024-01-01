@@ -19,7 +19,7 @@ button.onclick = hello2;
 const button2 = document.querySelector(".js-button2");
 
 button2.onclick = () => {
-    console.log("hello3");
+  console.log("hello3");
 };
 
 // 4. method - best practice, addEventListener
@@ -27,7 +27,7 @@ button2.onclick = () => {
 const button3 = document.querySelector(".js-button3");
 
 button3.addEventListener("click", () => {
-    console.log("hello4");
+  console.log("hello4");
 });
 
 // 5. event.target
@@ -35,8 +35,8 @@ button3.addEventListener("click", () => {
 const button4 = document.querySelector(".js-button4");
 
 const hello3 = (event) => {
-    console.log(event.target);
-    console.log("hello5");
+  console.log(event.target);
+  console.log("hello5");
 };
 
 button4.addEventListener("click", hello3);
@@ -46,10 +46,21 @@ button4.addEventListener("click", hello3);
 const buttons = document.querySelectorAll(".js-buttons");
 
 const hello4 = (event) => {
-    const name = event.target.innerText;
-    console.log(`hello ${name} !!!`);
+  const name = event.target.innerText;
+  console.log(`hello ${name} !!!`);
 };
 
 for (const button of buttons) {
-    button.addEventListener("click", hello4);
+  button.addEventListener("click", hello4);
 }
+
+// 7. event bubbling/delegation
+
+const section = document.querySelector(".js-section");
+
+const hello5 = (event) => {
+  const name = event.target.innerText;
+  console.log(`YO ${name} !!!`);
+};
+
+section.addEventListener("click", hello5);

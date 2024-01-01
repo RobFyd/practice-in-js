@@ -35,16 +35,24 @@
     <button onkeyup="alert('Hello World!')">Press keyboard button up!</button> -->
     <br />
     <br />
-    <button onclick="hello()">Click Me!</button>  <!-- we don't do that -->
-    <button class="js-button">Click Me!</button>  <!-- better method -->
-    <button class="js-button2">Click Me!</button>  <!-- better method, anonymous function -->
-    <button class="js-button3">Click Me!</button>  <!-- best method -->
-    <button class="js-button4">Click Me!</button>  <!-- event.target -->
+    <button onclick="hello()">Click Me!</button> <!-- we don't do that -->
+    <button class="js-button">Click Me!</button> <!-- better method -->
+    <button class="js-button2">Click Me!</button> <!-- better method, anonymous function -->
+    <button class="js-button3">Click Me!</button> <!-- best method -->
+    <button class="js-button4">Click Me!</button> <!-- event.target -->
     <br />
     <br />
     <!-- event.target fo few elements -->
     <button class="js-buttons">Robert</button>
     <button class="js-buttons">Magda</button>
     <button class="js-buttons">Alicja</button>
+    <br />
+    <br />
+    <!-- event bubbling/delegation -->
+    <section class="js-section">
+      <button>Robert</button>
+      <button>Magda</button>
+      <button>Alicja</button>
+    </section>
   </body>
 </html>
