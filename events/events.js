@@ -29,3 +29,27 @@ const button3 = document.querySelector(".js-button3");
 button3.addEventListener("click", () => {
     console.log("hello4");
 });
+
+// 5. event.target
+
+const button4 = document.querySelector(".js-button4");
+
+const hello3 = (event) => {
+    console.log(event.target);
+    console.log("hello5");
+};
+
+button4.addEventListener("click", hello3);
+
+// 6. event.target fo few elements
+
+const buttons = document.querySelectorAll(".js-buttons");
+
+const hello4 = (event) => {
+    const name = event.target.innerText;
+    console.log(`hello ${name} !!!`);
+};
+
+for (const button of buttons) {
+    button.addEventListener("click", hello4);
+}
