@@ -16,8 +16,8 @@ setInterval(myDate, 1000);
 
 const myFullDate = () => {
   const today = new Date();
-  const date = today.toDateString();
-  const time = today.toLocaleTimeString();
+  const date = today.toDateString(); // date only
+  const time = today.toLocaleTimeString(); // time only
   document.getElementById("js-datetime").innerHTML = date + " " + time;
 };
 
@@ -25,7 +25,7 @@ setInterval(myFullDate, 1000);
 
 const nextEx = () => {
   const date = new Date();
-  const full = date.toLocaleDateString();
+  const full = date.toLocaleDateString(); // date only
 
   document.querySelector(".js-nextEx").innerText = full;
 };
@@ -34,7 +34,7 @@ setInterval(nextEx, 1000);
 
 const nextEx2 = () => {
   const date = new Date();
-  const full2 = date.toString();
+  const full2 = date.toString(); // time and date with timezone
 
   document.querySelector(".js-nextEx2").innerText = full2;
 };
