@@ -19,3 +19,19 @@ body {
 .date__header {
     margin-right: 20px;
 }
+
+.date__text {
+    color: blueviolet;
+}
+
+.timeContainer {
+    display: flex;
+}
+
+.time__header {
+    margin-right: 20px;
+}
+
+.time__text {
+    color: blueviolet;
+}
