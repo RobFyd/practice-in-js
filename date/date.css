@@ -12,6 +12,13 @@ body {
     align-items: center;
 }
 
+.container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .dateContainer {
     display: flex;
 }
@@ -34,4 +41,26 @@ body {
 
 .time__text {
     color: blueviolet;
+}
+
+.fullDate {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+}
+
+.date__header {
+    margin-bottom: auto;
+}
+
+.date__time {
+    color: brown;
+    margin-bottom: 40px;
+}
+
+.otherEx {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    font-size: large;
 }
