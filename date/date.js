@@ -22,3 +22,11 @@ const myFullDate = () => {
 }
 
 setInterval(myFullDate, 1000);
+
+const nextEx = () => {
+    const date = new Date();
+    const full = date.toLocaleDateString();
+    document.querySelector(".js-nextEx").innerText = full;
+};
+
+setInterval(nextEx, 1000);
