@@ -64,3 +64,19 @@ body {
     align-self: start;
     font-size: large;
 }
+
+.orderedList {
+    list-style: none;
+    counter-reset: myCounter;
+}
+
+.orderedList li {
+    counter-increment: myCounter;
+}
+
+.orderedList li::before {
+    content: counter(myCounter) ". ";
+    color: darkblue;
+    font-weight: bold;
+    font-size: 20px;
+}
