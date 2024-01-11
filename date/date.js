@@ -48,7 +48,7 @@ const nextEx3 = () => {
   document.querySelector(".js-nextEx3").innerText = full3;
 };
 
-setInterval(nextEx3, 1000);
+nextEx3();
 
 const nextEx4 = () => {
   const date = new Date();
@@ -76,7 +76,7 @@ const nextEx6 = () => {
   document.querySelector(".js-nextEx6").innerText = showMyBirth;
 };
 
-setInterval(nextEx6, 1000);
+nextEx6();
 
 const nextEx7 = () => {
   const date = new Date();
@@ -85,7 +85,7 @@ const nextEx7 = () => {
   document.querySelector(".js-nextEx7").innerText = full7;
 };
 
-setInterval(nextEx7, 1000);
+nextEx7();
 
 const diffrence = () => {
   const date1 = new Date(2025, 0, 12, 12, 14, 15); // difference between two dates in seconds and days
@@ -99,3 +99,14 @@ const diffrence = () => {
 };
 
 diffrence();
+
+const nextEx10 = () => {
+  const timestamp = Date.now()  // current timestamp
+  document.querySelector(".js-nextEx10").innerText = timestamp;
+
+  const date = new Date(timestamp);
+  const formattedDateTime = date.toLocaleString();
+  document.querySelector(".js-nextEx11").innerText = formattedDateTime;
+};
+
+setInterval(nextEx10, 1000);
