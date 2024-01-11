@@ -64,7 +64,16 @@ const nextEx3 = () => {
     const full5 = date.setHours(22); // set hours to 22
   
     document.querySelector(".js-nextEx5").innerText = date;
-    console.log(full5);
+    // console.log(full5);
   };
   
   setInterval(nextEx5, 1000);
+
+  const nextEx6 = () => {
+    const myBirthday = new Date(1986, 11, 24, 22, 0, 0);
+    const showMyBirth = myBirthday.toLocaleString(); // set my birthday date
+  
+    document.querySelector(".js-nextEx6").innerText = showMyBirth;
+  };
+  
+  setInterval(nextEx6, 1000);
