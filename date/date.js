@@ -61,10 +61,10 @@ const nextEx3 = () => {
 
   const nextEx5 = () => {
     const date = new Date();
-    const full5 = date.setHours(22); // set hours to 22
+    const newHour = date.setHours(22); // set hours to 22
   
     document.querySelector(".js-nextEx5").innerText = date;
-    // console.log(full5);
+    // console.log(newHour);
   };
   
   setInterval(nextEx5, 1000);
@@ -77,3 +77,12 @@ const nextEx3 = () => {
   };
   
   setInterval(nextEx6, 1000);
+
+  const nextEx7 = () => {
+    const date = new Date();
+    const full7 = date.getDay(); // day of the week
+  
+    document.querySelector(".js-nextEx7").innerText = full7;
+  };
+  
+  setInterval(nextEx7, 1000);
