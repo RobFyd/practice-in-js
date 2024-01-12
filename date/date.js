@@ -87,7 +87,7 @@ const nextEx7 = () => {
 
 nextEx7();
 
-const diffrence = () => {
+const diffrence89 = () => {
   const date1 = new Date(2025, 0, 12, 12, 14, 15); // difference between two dates in seconds and days
   const date2 = new Date(2025, 1, 5, 11, 12, 10);
 
@@ -98,9 +98,9 @@ const diffrence = () => {
   document.querySelector(".js-nextEx9").innerText = dayDiff;
 };
 
-diffrence();
+diffrence89();
 
-const nextEx10 = () => {
+const nextEx1011 = () => {
   const timestamp = Date.now()  // current timestamp
   document.querySelector(".js-nextEx10").innerText = timestamp;
 
@@ -109,4 +109,25 @@ const nextEx10 = () => {
   document.querySelector(".js-nextEx11").innerText = formattedDateTime;
 };
 
-setInterval(nextEx10, 1000);
+setInterval(nextEx1011, 1000);
+
+const nextEx12 = () => {
+  const date = new Date();
+  const full12 = date.toLocaleString("en-US", { timeZone: "America/New_York" }); // time in New York
+
+  document.querySelector(".js-nextEx12").innerText = full12;
+};
+
+setInterval(nextEx12, 1000);
+
+const nextEx13 = () => {
+  const date = new Date();
+  const full13 = date.toLocaleString("en-US", { timeZone: "Europe/London" }); // time in London
+
+  document.querySelector(".js-nextEx13").innerText = full13;
+};
+
+setInterval(nextEx13, 1000);
+
+
+
