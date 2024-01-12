@@ -174,6 +174,15 @@ const nextEx18 = () => {
 
 setInterval(nextEx18, 1000);
 
+const nextEx19 = () => {
+  const date = new Date();
+  const full19 = date.toISOString(); // ISO date for API calls and databases (backend) etc. 
+
+  document.querySelector(".js-nextEx19").innerText = full19;
+};
+
+setInterval(nextEx19, 1000);
+
 
 
 
