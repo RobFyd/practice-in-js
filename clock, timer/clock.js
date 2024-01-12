@@ -7,3 +7,11 @@ document.querySelector(".js-button").addEventListener("click", () => {
         alert("you clicked the button 2 seconds ago");
       }, 2 * 1000);
 });
+
+function showAlert() {
+    alert("you clicked the second button");
+};
+
+document.querySelector(".js-button2").addEventListener("click", () => {
+    setTimeout(showAlert, 500);
+});
