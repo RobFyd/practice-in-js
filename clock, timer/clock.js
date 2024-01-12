@@ -57,6 +57,17 @@ const intervalId = setInterval(() => {
     console.log("do whatever");
 }, 200);
 
-setInterval(() => {
+setTimeout(() => {
     clearInterval(intervalId);
 }, 1500);  // cancel the interval after 1.5s
+
+/////////////////////////////////////////////// recursive timeouts
+
+let counter2 = 1;
+
+const showCounter = () => {
+    console.log(counter2++);
+    setTimeout(showCounter, 1000);  // recursive timeout
+};
+
+showCounter();
