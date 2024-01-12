@@ -122,12 +122,39 @@ setInterval(nextEx12, 1000);
 
 const nextEx13 = () => {
   const date = new Date();
-  const full13 = date.toLocaleString("en-US", { timeZone: "Europe/London" }); // time in London
+  const full13 = date.toLocaleString("en-EN", { timeZone: "Europe/London" }); // time in London
 
   document.querySelector(".js-nextEx13").innerText = full13;
 };
 
 setInterval(nextEx13, 1000);
+
+const nextEx14 = () => {
+  const date = new Date();
+  const full14 = date.toLocaleString("de-DE", { timeZone: "Europe/Berlin" }); // time in Berlin
+
+  document.querySelector(".js-nextEx14").innerText = full14;
+};
+
+setInterval(nextEx14, 1000);
+
+const nextEx15 = () => {
+  const date = new Date();
+  const full15 = date.toLocaleDateString("en-US", { weekday: "long" }); // day of the week
+
+  document.querySelector(".js-nextEx15").innerText = full15;
+};
+
+nextEx15();
+
+const nextEx16 = () => {
+  const date = new Date();
+  const full16 = date.toLocaleDateString("en-US", { month: "long" }); // month
+
+  document.querySelector(".js-nextEx16").innerText = full16;
+};
+
+nextEx16();
 
 
 
