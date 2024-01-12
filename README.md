@@ -14,6 +14,7 @@ Practical exercises in JavaScript. In the history of the repository you will fin
 - objects
 - arrays
 - time and date
+- setInterval, setTimeout
 - JSON (parsing, stringifying)
 - fetch, axios, post
 - promise, custom promise
