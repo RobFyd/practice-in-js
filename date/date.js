@@ -156,5 +156,24 @@ const nextEx16 = () => {
 
 nextEx16();
 
+const nextEx17 = () => {
+  const date = new Date();
+  const full17 = date.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long", year: "numeric" });  // custom date  // undefined = default language by hardware
+
+  document.querySelector(".js-nextEx17").innerText = full17;
+};
+
+setInterval(nextEx17, 1000);
+
+const nextEx18 = () => {
+  const date = new Date();
+  const full18 = date.toLocaleDateString("jpn", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "numeric", minute: "numeric", second: "numeric" });  // custom date  // jpn = japanese
+
+  document.querySelector(".js-nextEx18").innerText = full18;
+};
+
+setInterval(nextEx18, 1000);
+
+
 
 
