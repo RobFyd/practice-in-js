@@ -23,3 +23,24 @@ console.log(productsParsed);
 
 
 // sessionStorage is the same as localStorage but it will be cleared out when we close the browser
+
+const products2 = [
+    {
+        name: "kia parts",
+        price: 100,
+    },
+    {
+        name: "fork",
+        price: 5,
+    },
+];
+
+
+const productsToStorage2 = sessionStorage.setItem("products", JSON.stringify(products2));
+console.log(productsToStorage2);
+
+const productsFromStorage2 = sessionStorage.getItem("products");
+console.log(productsFromStorage2);
+
+const productsParsed2 = JSON.parse(productsFromStorage2);
+console.log(productsParsed2);
