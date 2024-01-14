@@ -93,3 +93,7 @@ console.log(findSingleStudent([2, 4, 5, 4, 2])); // 5
 console.log(findSingleStudent([1, 1, 3, 3])); // null
 console.log(findSingleStudent([11, 21, 21, 85, 8, 8, 11])); // 85
 }
+
+{
+  
+}
