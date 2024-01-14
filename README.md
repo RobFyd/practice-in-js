@@ -15,6 +15,7 @@ Practical exercises in JavaScript. In the history of the repository you will fin
 - arrays
 - time and date
 - local storage
+- cookies
 - setInterval, setTimeout
 - JSON (parsing, stringifying)
 - fetch, axios, post
