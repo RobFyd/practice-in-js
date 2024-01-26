@@ -1,6 +1,14 @@
 //  try, throw, catch, (finally)
 
 {
+  try {
+    throw "Some serious error";
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+{
   const weekDay = (index) => {
     const days = [
       "monday",
@@ -58,17 +66,16 @@
 
 //  JSON check
 
-  const isValidJSON = (json) => {
-    try {
-      JSON.parse(json);
-      return true;
-    } catch(error) {
-      return false;
-    }
-  };
+const isValidJSON = (json) => {
+  try {
+    JSON.parse(json);
+    return true;
+  } catch (error) {
+    return false;
+  }
+};
 
-
-  //  JSON.stringify
+//  JSON.stringify
 
 const object1 = {};
 const object2 = {};
