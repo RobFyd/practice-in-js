@@ -27,19 +27,24 @@
     const month = months[index];
 
     if (!month) {
-      throw new Error("incorrect index");
+      throw new Error("incorrect index"); //  throw error
     }
 
     return month;
   };
 
   try {
+    //  try block
     const month = yearMonths(12);
     console.log(month);
   } catch (error) {
+    //  catch error
     console.error(error.message);
     console.error(error.name);
     alert("You must enter a number between 0 and 11");
+  } finally {
+    //  always run
+    console.log("This code will always run");
   }
 }
 
