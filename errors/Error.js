@@ -9,32 +9,37 @@
 }
 
 {
-  const weekDay = (index) => {
-    const days = [
-      "monday",
-      "tuesday",
-      "wednesday",
-      "thursday",
-      "friday",
-      "saturday",
-      "sunday",
+  const yearMonths = (index) => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
     ];
-    const day = days[index];
+    const month = months[index];
 
-    if (!day) {
+    if (!month) {
       throw new Error("incorrect index");
     }
 
-    return day;
+    return month;
   };
 
   try {
-    const day = weekDay(22);
-    console.log(day);
+    const month = yearMonths(22);
+    console.log(month);
   } catch (error) {
     console.error(error.message);
     console.error(error.name);
-    console.error("You must enter a number between 0 and 6");
+    console.error("You must enter a number between 0 and 11");
   }
 }
 
