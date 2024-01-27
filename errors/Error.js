@@ -34,12 +34,12 @@
   };
 
   try {
-    const month = yearMonths(22);
+    const month = yearMonths(12);
     console.log(month);
   } catch (error) {
     console.error(error.message);
     console.error(error.name);
-    console.error("You must enter a number between 0 and 11");
+    alert("You must enter a number between 0 and 11");
   }
 }
 
