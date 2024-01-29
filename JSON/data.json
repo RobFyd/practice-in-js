@@ -1,0 +1,15 @@
+{
+  "page": 1,
+  "books": [
+    {
+      "id": 1,
+      "title": "The Lord of the Rings",
+      "author": null
+    },
+    {
+      "id": 2,
+      "title": "The Hobbit",
+      "active": true
+    }
+  ]
+}
