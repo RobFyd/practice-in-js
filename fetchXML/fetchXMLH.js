@@ -1,13 +1,13 @@
-// XMLH - rather as a curiosity
+console.log("Loading 1:XMLH, 2:fetch, 3:alternative fetch, 4:catch");
+
+// 1: XMLH - rather as a curiosity
 
 {
-  console.log("Loading 1:XMLH, 2:etch, 3:alternative fetch, 4:catch");
-
   const request = new XMLHttpRequest();
 
   request.open("GET", "products.json");
 
-  request.responseType = "json";
+  request.responseType = "json"; // can be also 'text' or 'blob' or 'arraybuffer'
 
   request.onload = () => {
     console.log(request.response);
@@ -16,7 +16,7 @@
   request.send();
 }
 
-// fetch - replacement for XHR
+// 2: fetch - replacement for XHR
 
 {
   fetch("products.json").then((response) => {
@@ -35,7 +35,7 @@
 }
 
 {
-  //  alternative fetch
+  //  3: alternative fetch
 
   fetch("products.json")
     .then((response) => response.json()) // first promise
@@ -43,7 +43,7 @@
 }
 
 {
-  // catch - when something goes wrong
+  // 4: catch - when something goes wrong
 
   fetch("https://thisdoesntexist")
     .then((response) => response.json()) // first promise
