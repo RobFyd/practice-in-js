@@ -25,13 +25,15 @@ console.log("Loading 1:XMLH, 2:fetch, 3:alternative fetch, 4:catch");
     });
   });
 
-  // const promise = fetch("products.json");
+  // const promise = fetch("products.json");  // order of operation
 
-  // promise.then((response) => {
-  //   response.json().then((products) => {
-  //     console.log(products);
-  //   });
-  // });
+  // promise
+  //    .then((response) => {
+  //        response.json()
+  //            .then((products) => {
+  //                console.log(products);
+  //             });
+  //      });
 }
 
 {
