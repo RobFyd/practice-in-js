@@ -10,7 +10,7 @@ console.log("Loading 1:XMLH, 2:fetch, 3:alternative fetch, 4:catch");
   request.responseType = "json"; // can be also 'text' or 'blob' or 'arraybuffer'
 
   request.onload = () => {
-    console.log(request.response);
+    console.log(request.response, "1");
   };
 
   request.send();
@@ -21,7 +21,7 @@ console.log("Loading 1:XMLH, 2:fetch, 3:alternative fetch, 4:catch");
 {
   fetch("products.json").then((response) => {
     response.json().then((products) => {
-      console.log(products);
+      console.log(products, "2");
     });
   });
 
@@ -39,7 +39,7 @@ console.log("Loading 1:XMLH, 2:fetch, 3:alternative fetch, 4:catch");
 
   fetch("products.json")
     .then((response) => response.json()) // first promise
-    .then((products) => console.log(products)); // second promise
+    .then((products) => console.log(products, "3")); // second promise
 }
 
 {
@@ -49,8 +49,8 @@ console.log("Loading 1:XMLH, 2:fetch, 3:alternative fetch, 4:catch");
     .then((response) => response.json()) // first promise
     .then((products) => console.log(products)) // second promise
     .catch((error) => {
-      console.log("Something bad happened");
+      console.log("Something bad happened, 4");
       console.error(error);
-      alert("Something bad happened");
+      alert("Something bad happened, 4");
     });
 }
