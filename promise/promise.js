@@ -1,14 +1,16 @@
-// {
-//   const logProducts = (products) => console.log(products);
+// Promise - 1
+{
+  const logProducts = (products) => console.log(products, "1");
 
-//   const promise = fetch("products.json");
+  const promise = fetch("products.json");
 
-//   promise
-//     .then((response) => response.json())
-//     .then(logProducts)
-//     .catch((error) => console.error("Something went wrong", error));
-// }
+  promise
+    .then((response) => response.json())
+    .then(logProducts)
+    .catch((error) => console.error("Something went wrong 1", error));
+}
 
+// fetch gave us a promise - 2
 {
   fetch("products.json")
     .then((response) => {
@@ -18,8 +20,8 @@
       return response;
     })
     .then((response) => response.json())
-    .then((response) => console.log(response, "1"))
-    .catch(() => console.error("Something went wrong 1"));
+    .then((response) => console.log(response, "2"))
+    .catch((error) => console.error("Something went wrong 2", error));
 }
 
 // {
