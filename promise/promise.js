@@ -15,15 +15,11 @@
       if (!response.ok) {
         throw new Error(response.statusText);
       }
-
       return response;
     })
-
     .then((response) => response.json())
-
-    .then((response) => console.log(response))
-
-    .catch(() => console.error("Something went wrong"));
+    .then((response) => console.log(response, "1"))
+    .catch(() => console.error("Something went wrong 1"));
 }
 
 // {
