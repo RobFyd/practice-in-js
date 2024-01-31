@@ -47,12 +47,25 @@ console.log("Loading 1:XMLH, 2:fetch, 3:alternative fetch, 4:catch");
 {
   // 4: catch - when something goes wrong
 
-  fetch("https://thisdoesntexist")
+  fetch("https://thisdoesntexist")  // this will fail
     .then((response) => response.json()) // first promise
-    .then((products) => console.log(products)) // second promise
+    .then((products) => console.log(products, "4")) // second promise
     .catch((error) => {
       console.log("Something bad happened, 4");
       console.error(error);
       alert("Something bad happened, 4");
     });
 }
+
+// sending data, object to the server - POST
+
+fetch("https://example/add-person", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        firstName: "John",
+        lastName: "Doe"
+    }),
+});
