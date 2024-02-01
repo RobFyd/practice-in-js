@@ -10,7 +10,7 @@
     .catch((error) => console.error("Something went wrong 1", error));
 }
 
-// fetch gave us a promise - 2
+// better error handling for fetch, fetch gave us a promise - 2
 {
   fetch("products.json")
     .then((response) => {
@@ -24,9 +24,8 @@
     .catch((error) => console.error("Something went wrong 2", error));
 }
 
+// own promise - example
 // {
-//   // own promise
-
 //   const promise = new Promise((resolve, reject) => {
 //     resolve(result);
 //     // or
