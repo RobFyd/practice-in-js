@@ -35,7 +35,7 @@
 //   promise.then();
 // }
 
-// setTimeout to Promise
+// setTimeout to Promise - 3
 {
   const wait = (time) =>
     new Promise((resolve) => {
@@ -43,32 +43,38 @@
     });
 
   wait(1000).then(() => {
-    console.log("one second passed");
+    console.log("one second passed - 3");
   });
 }
 
-//add reject
+// reject added - 4
 {
   const wait = (time) =>
     new Promise((resolve, reject) => {
       if (typeof time !== "number" || time < 0) {
-        reject("incorrect time");
+        reject("incorrect time - 4");
       }
       setTimeout(resolve, time);
     });
 
   wait(2000)
     .then(() => {
-      console.log("two seconds passed");
+      console.log("two seconds passed - 4");
     })
     .catch((error) => {
       console.error(error);
     });
 }
 
-// async function, await
+// async function - 5
 {
-  const getName = async () => "Bonifacy";
+  const getName = async () => "Bonifacy 5";
+  getName().then(console.log);
+}
+
+// async/await function - 6
+{
+  const getName = async () => "Caterine 6";
 
   (async () => {
     const name = await getName();
@@ -76,12 +82,12 @@
   })();
 }
 
-// simply fetch with async/await
+// simply fetch with async/await - 7
 {
   (async () => {
     const response = await fetch("products.json");
     const products = await response.json();
-    console.log(products + "async/await");
+    console.log(products + "async/await", "7");
   })();
 }
 
