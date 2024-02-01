@@ -35,7 +35,7 @@
 //   promise.then();
 // }
 
-// setTimeout to Promise - 3
+// setTimeout to Promise (own promise) - 3
 {
   const wait = (time) =>
     new Promise((resolve) => {
@@ -91,32 +91,32 @@
   })();
 }
 
-//  fetch + async/await  + error handling
+//  fetch + async/await + error handling - 8
 {
   (async () => {
     try {
-      const response = await fetch("productss.json");
+      const response = await fetch("products.json");
 
       if (!response.ok) {
         throw new Error(response.statusText);
       }
 
       const products = await response.json();
-      console.log(products + "async/await");
+      console.log(products + "async/await", "8");
     } catch (error) {
-      console.error("Something wrong", error);
+      console.error("Something wrong 8", error);
     }
   })();
 }
 
-//  with axios easier
+//  async/await with axios easier - 9
 {
   (async () => {
     try {
-      const response = await axios.get("productsssss.json");
-      console.log(response.data);
+      const response = await axios.get("products.json");
+      console.log(response.data, "9");
     } catch (error) {
-      console.error("errorError", error);
+      console.error("error 9", error);
     }
   })();
 }
