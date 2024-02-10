@@ -40,3 +40,21 @@ const fact3 = (o) => {
 };
 
 console.log("o! = ", fact3(o));
+
+// collatz problem
+let p = 11;
+
+const collatz = (p) => {
+    // base case
+    if (p === 1) {
+      return 0;
+    }
+    // even numbers
+    if (p % 2 === 0) {
+      return 1 + collatz(p / 2);
+    }
+    // odd numbers
+    return 1 + collatz(3 * p + 1);
+}
+
+console.log("collatz = ", collatz(p));
