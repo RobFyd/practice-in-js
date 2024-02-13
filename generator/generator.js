@@ -3,7 +3,9 @@
     yield 5;
     yield "tekst";
     yield null;
-    yield {}; //between yields you can give other expressions
+    yield {type: "cosmetic", brand: "jhonson"}; //between yields you can give other expressions
+    return "end of generator";
+    yield {type: "soap", brand: "dove"}; //this will not be executed
   }
 
   const iterator = generator();
