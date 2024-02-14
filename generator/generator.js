@@ -3,9 +3,9 @@
     yield 5;
     yield "tekst";
     yield null;
-    yield {type: "cosmetic", brand: "jhonson"}; //between yields you can give other expressions
+    yield { type: "cosmetic", brand: "jhonson" }; //between yields you can give other expressions
     return "end of generator";
-    yield {type: "soap", brand: "dove"}; //this will not be executed
+    yield { type: "soap", brand: "dove" }; //this will not be executed
   }
 
   const iterator = generator();
@@ -43,41 +43,56 @@
   console.log(iterator2.next().value);
 }
 
-function* generator3(parameter) {
-  console.log(parameter);
-  yield 5;
-  yield "tekst";
-  yield null;
-  yield {};
-}
-
-const iterator3 = generator3(100);
-
-function* nextProductName(products) {
-  for (product of products) {
-    yield product.name;
+{
+  function* generator3(parameter) {
+    console.log(parameter);
+    yield 55;
+    yield "text";
+    yield null;
+    yield {};
   }
+
+  const iterator3 = generator3(100);
+
+  console.log(iterator3.next().value);
+  console.log(iterator3.next().value);
+  console.log(iterator3.next().value);
+  console.log(iterator3.next().value);
 }
 
-const generator4 = nextProductName([
-  {
-    name: "Audio",
-    price: 299,
-  },
-  {
-    name: "TV",
-    price: 12999,
-  },
-]);
+{
+  function* nextProductName(products) {
+    for (product of products) {
+      yield product.name;
+    }
+  }
 
-function* crazyGenerator() {
+  const generator4 = nextProductName([
+    {
+      name: "Audio",
+      price: 299,
+    },
+    {
+      name: "TV",
+      price: 12999,
+    },
+  ]);
+
+  console.log(generator4.next().value);
+  console.log(generator4.next().value);
+  console.log(generator4.next().value);
+}
+
+{
+  function* crazyGenerator() {
     const number = yield 5;
     const text = yield number * 5;
     yield text.repeat(5);
+  }
+
+  const generator5 = crazyGenerator();
+
+  console.log(generator5.next());
+  console.log(generator5.next(100));
+  console.log(generator5.next("Robi "));
 }
-
-const generator5 = crazyGenerator();
-
-console.log(generator5.next());
-console.log(generator5.next(100));
-console.log(generator5.next("Robi "));
