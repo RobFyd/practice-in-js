@@ -11,3 +11,22 @@
             hsl(var(--hue) 80% 70%),
             transparent) calc((var(--x) * 1px) - (var(--size) * 0.5)) calc((var(--y) * 1px) - (var(--size) * 0.5)) / var(--size) var(--size) no-repeat fixed;
 }
+
+.controls {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+body {
+    font-family: "SF Pro Text";
+    background: var(--bg);
+}
+
+button {
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1ch;
+    background: var(--bg);
+}
