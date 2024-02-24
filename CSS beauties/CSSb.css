@@ -21,6 +21,7 @@
 body {
     font-family: "SF Pro Text";
     background: var(--bg);
+    padding: 3rem;
 }
 
 button {
