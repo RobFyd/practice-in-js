@@ -13,21 +13,10 @@ const people = [
 
 const logPersonInfo = (person, index, arr) => {
   console.log(
-    `${index + 1} from ${arr.length} ${person.name} ${person.lastName} from ${
+    `${index + 1} in ${arr.length} ${person.name} ${person.lastName} from ${
       person.country
     } earns ${person.salary}`
   );
 };
 
-for (let i = 0; i < people.length; i++) {
-  const person = people[i];
-  logPersonInfo(person, i, people);
-}
-
-console.log("###");
-console.log(".forEach");
-console.log("###");
-
-people.forEach((person, index, arr) => {
-  logPersonInfo(person, index, arr);
-});
+people.forEach(logPersonInfo);
