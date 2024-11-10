@@ -46,5 +46,10 @@ console.log(yearlySalary);
 
 people
   .map((person) => ({ ...person, yearlySalary: person.salary * 12 }))
-  .filter((person) => person.yearlySalary > 100000)
+  .filter(({ yearlySalary }) => yearlySalary > 100000) //destructuring
   .forEach(logPersonInfo);
+
+//reduce
+console.log("###");
+console.log(".reduce");
+console.log("###");
