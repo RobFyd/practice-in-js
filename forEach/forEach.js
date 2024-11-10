@@ -19,20 +19,24 @@ const logPersonInfo = (person, index, arr) => {
   );
 };
 
+//forEach
 console.log("###");
 console.log(".forEach");
 console.log("###");
-//forEach
 
 people.forEach(logPersonInfo);
 
+//filter
 console.log("###");
 console.log(".filter");
 console.log("###");
-//filter
 
-const richPeople = people.filter((person) => person.salary > 5000);
-console.log(richPeople);
+console.log("rich people:");
+people.filter((person) => person.salary > 5000).forEach(logPersonInfo);
+console.log("people from PL:");
+people.filter((person) => person.country === "PL").forEach(logPersonInfo);
 
-const polishPeople = people.filter((person) => person.country === "PL");
-console.log(polishPeople);
+//map
+console.log("###");
+console.log(".map");
+console.log("###");
