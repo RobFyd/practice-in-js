@@ -40,3 +40,6 @@ people.filter((person) => person.country === "PL").forEach(logPersonInfo);
 console.log("###");
 console.log(".map");
 console.log("###");
+
+const yearlySalary = people.map((person) => person.salary * 12);
+console.log(yearlySalary);
