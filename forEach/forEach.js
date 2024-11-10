@@ -20,3 +20,33 @@ const logPersonInfo = (person, index, arr) => {
 };
 
 people.forEach(logPersonInfo);
+
+console.log("###");
+console.log(".richPeople");
+console.log("###");
+
+const richPeople = [];
+
+for (let i = 0; i < people.length; i++) {
+  const person = people[i];
+  if (person.salary >= 5000) {
+    richPeople.push(person);
+  }
+}
+
+console.log(richPeople);
+
+console.log("###");
+console.log(".polishPeople");
+console.log("###");
+
+const polishPeople = [];
+
+for (let i = 0; i < people.length; i++) {
+  const person = people[i];
+  if (person.country === "PL") {
+    polishPeople.push(person);
+  }
+}
+
+console.log(polishPeople);
