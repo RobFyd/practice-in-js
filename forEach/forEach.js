@@ -43,3 +43,8 @@ console.log("###");
 
 const yearlySalary = people.map((person) => person.salary * 12);
 console.log(yearlySalary);
+
+people
+  .map((person) => ({ ...person, yearlySalary: person.salary * 12 }))
+  .filter((person) => person.yearlySalary > 100000)
+  .forEach(logPersonInfo);
